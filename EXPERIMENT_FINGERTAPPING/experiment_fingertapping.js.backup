@@ -1,0 +1,365 @@
+// Initialize jsPsych
+var jsPsych = initJsPsych({
+    on_finish: function() {
+        jatos.endStudy(); // End the study in JATOS
+    }
+});
+
+// Experiment parameters
+const experimentParameters = [
+    { interval: 800, condition: 'fast', description: 'Fast (0.8s intervals)' },
+    { interval: 1900, condition: 'slow', description: 'Slow (1.9s intervals)' }
+];
+
+// Get subject info
+function getSubjectInfo() {
+    let subID = prompt("Please enter your subject ID:");
+    return {
+        subID: subID || 'unknown',
+        date: new Date().toISOString()
+    };
+}
+
+const sub_info = getSubjectInfo();
+
+// Randomize condition order
+const randomizedConditions = [...experimentParameters].sort(() => Math.random() - 0.5);
+
+// Single audio element to prevent volume issues
+let audioContext;
+let beepBuffer;
+
+// Initialize audio
+function initAudio() {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Create beep sound programmatically
+    const duration = 0.1;
+    const sampleRate = audioContext.sampleRate;
+    const numFrames = duration * sampleRate;
+    const buffer = audioContext.createBuffer(1, numFrames, sampleRate);
+    const data = buffer.getChannelData(0);
+
+    const frequency = 450;
+    for (let i = 0; i < numFrames; i++) {
+        data[i] = Math.sin(2 * Math.PI * frequency * i / sampleRate) * 0.5;
+    }
+
+    beepBuffer = buffer;
+}
+
+function playBeepSound() {
+    if (!audioContext) {
+        initAudio();
+    }
+
+    if (audioContext.state === 'suspended') {
+        audioContext.resume();
+    }
+
+    const source = audioContext.createBufferSource();
+    source.buffer = beepBuffer;
+
+    const gainNode = audioContext.createGain();
+    gainNode.gain.value = 0.5;
+
+    source.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    source.start();
+    source.stop(audioContext.currentTime + 0.1);
+}
+
+function saveData() {
+    // Get all data from jsPsych
+    const allData = jsPsych.data.get().values();
+
+    // Create CSV content
+    let csvContent = "trial_number,timestamp,interval,condition\n";
+
+    let trialNumber = 1;
+
+    // Process each trial to extract tap data
+    allData.forEach(trial => {
+        if (trial.tap_timestamps && trial.tap_timestamps.length > 0) {
+            const condition = trial.condition || 'unknown';
+
+            // Add first tap (no interval)
+            csvContent += `${trialNumber},${trial.tap_timestamps[0].toFixed(2)},,${condition}\n`;
+            trialNumber++;
+
+            // Add subsequent taps with intervals
+            for (let i = 1; i < trial.tap_timestamps.length; i++) {
+                const timestamp = trial.tap_timestamps[i];
+                const interval = trial.tap_intervals && trial.tap_intervals[i - 1] ? trial.tap_intervals[i - 1].toFixed(2) : '';
+                csvContent += `${trialNumber},${timestamp.toFixed(2)},${interval},${condition}\n`;
+                trialNumber++;
+            }
+        }
+    });
+
+    // Submit CSV data as a SEPARATE result that JATOS will display nicely
+    jatos.submitResultData(csvContent, "text/csv");
+    
+    // Also submit metadata as separate result
+    const metadata = {
+        subject_id: sub_info.subID,
+        date: new Date().toISOString(),
+        total_taps: trialNumber - 1
+    };
+    jatos.appendResultData(metadata);
+    
+    // Optional: Keep CSV download for immediate backup
+    const date = new Date();
+    const dateStr = date.toISOString().split('T')[0];
+    const timeStr = date.toTimeString().split(':').slice(0, 2).join('');
+    const filename = `${dateStr}_${timeStr}_${sub_info.subID}.csv`;
+    
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+// Main timeline
+var timeline = [];
+
+// Instructions
+var instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+        <div style="font-size: 24px; text-align: center; max-width: 800px; margin: 0 auto;">
+            <h1>Finger Tapping Experiment</h1>
+            <p>You will complete two tapping conditions:</p>
+            <ul style="text-align: left; display: inline-block;">
+                <li><strong>Fast rhythm:</strong> Tap every 0.8 seconds</li>
+                <li><strong>Slow rhythm:</strong> Tap every 1.9 seconds</li>
+            </ul>
+            <p>Keep your eyes on the fixation point and use your LEFT INDEX finger.</p>
+            <p style="margin-top: 30px;">Press SPACEBAR to begin.</p>
+        </div>
+    `,
+    choices: [' '],
+    on_finish: function() {
+        // Initialize audio AFTER user presses spacebar
+        initAudio();
+    }
+};
+timeline.push(instructions);
+
+// Create trials for each condition
+randomizedConditions.forEach((condition, index) => {
+    let tapTimestamps = [];
+    let tapIntervals = [];
+    let lastTapTime = null;
+    let tappingStartTime = null;
+
+    // Condition instruction
+    var condition_instruction = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `
+            <div style="font-size: 24px; text-align: center;">
+                <h2>Condition ${index + 1}/2: ${condition.description}</h2>
+                <p>First, you'll learn the rhythm by listening to beeps.</p>
+                <p>Then you'll tap for 5 minutes without beeps.</p>
+                <p style="margin-top: 30px;">Press SPACEBAR to begin learning phase.</p>
+            </div>
+        `,
+        choices: [' ']
+    };
+    timeline.push(condition_instruction);
+
+    // Learning Phase - No skipping allowed
+    // Learning Phase - No skipping allowed
+    var learning_phase = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `
+            <div style="text-align: center; font-size: 48px;">
+                <p>+</p>
+                <p style="font-size: 18px; margin-top: 20px;">
+                    Listen to the beeps and tap along with SPACEBAR<br>
+                    Learn the ${condition.description} rhythm...
+                </p>
+            </div>
+        `,
+        choices: [' '],
+        trial_duration: condition.interval * 12 + 1000, // Plenty of time for 11 beeps
+        response_ends_trial: false,
+        on_start: function () {
+            // Ensure audio context is active
+            if (audioContext && audioContext.state === 'suspended') {
+                audioContext.resume();
+            }
+            
+            console.log("Starting learning phase with interval:", condition.interval);
+            
+            // Play beeps with exact timing using sequential timeouts
+            const playBeepSequence = (beepNumber) => {
+                if (beepNumber < 11) { // 0 through 10 = 11 beeps
+                    setTimeout(() => {
+                        playBeepSound();
+                        console.log("Beep:", beepNumber + 1);
+                        playBeepSequence(beepNumber + 1);
+                    }, condition.interval);
+                }
+            };
+            
+            // Start first beep after initial delay
+            setTimeout(() => {
+                playBeepSound();
+                console.log("First beep");
+                playBeepSequence(1); // Start sequence from beep 2
+            }, 500);
+        },
+        on_finish: function () {
+            console.log("Learning phase finished");
+        }
+    };
+    timeline.push(learning_phase);
+
+    // Transition
+    var transition = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `
+            <div style="font-size: 24px; text-align: center;">
+                <h2>Now continue tapping</h2>
+                <p>No more beeps will be played.</p>
+                <p>Keep tapping with the ${condition.description} rhythm for 5 minutes.</p>
+                <p style="margin-top: 30px;">Press SPACEBAR to begin tapping.</p>
+            </div>
+        `,
+        choices: [' '],
+        on_finish: function () {
+            // Reset for tapping phase
+            tapTimestamps = [];
+            tapIntervals = [];
+            lastTapTime = null;
+            tappingStartTime = null;
+        }
+    };
+    timeline.push(transition);
+
+    // Tapping Phase
+    var tapping_phase = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `
+            <div style="text-align: center; font-size: 48px;">
+                <p>+</p>
+            </div>
+        `,
+        choices: [' '],
+        trial_duration: 10000, // 10 seconds for testing - change to 300000 for 5 minutes
+        response_ends_trial: false,
+
+        on_load: function () {
+            tappingStartTime = performance.now();
+
+            this.keyboardListener = function (event) {
+                if (event.code === 'Space') {
+                    event.preventDefault();
+
+                    const currentTime = performance.now();
+                    const relativeTime = currentTime - tappingStartTime;
+
+                    tapTimestamps.push(relativeTime);
+
+                    if (lastTapTime !== null) {
+                        const interval = relativeTime - lastTapTime;
+                        tapIntervals.push(interval);
+                    }
+
+                    lastTapTime = relativeTime;
+
+                    const tapCounter = document.getElementById('tap-counter');
+                    if (tapCounter) {
+                        tapCounter.textContent = 'Taps: ' + tapTimestamps.length;
+                    }
+                }
+            };
+
+            document.addEventListener('keydown', this.keyboardListener);
+        },
+
+        on_finish: function (data) {
+            document.removeEventListener('keydown', this.keyboardListener);
+
+            // Store data for saving
+            data.phase = 'tapping';
+            data.condition = condition.condition;
+            data.tap_timestamps = tapTimestamps.slice();
+            data.tap_intervals = tapIntervals.slice();
+
+            // SAVE DATA IMMEDIATELY after each tapping phase
+            if (index === randomizedConditions.length - 1) {
+                // This is the last condition, save all data
+                saveData();
+            }
+        }
+    };
+    timeline.push(tapping_phase);
+
+    // Short break between conditions
+    if (index < randomizedConditions.length - 1) {
+        var break_screen = {
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: `
+                <div style="font-size: 24px; text-align: center;">
+                    <h2>Take a short break</h2>
+                    <p>Ready for the next condition.</p>
+                    <p style="margin-top: 30px;">Press SPACEBAR to continue.</p>
+                </div>
+            `,
+            choices: [' '],
+            trial_duration: 5000
+        };
+        timeline.push(break_screen);
+    }
+});
+
+// End screen
+var end_screen = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+        <div style="font-size: 24px; text-align: center;">
+            <h1>Experiment Complete!</h1>
+            <p>Thank you for participating.</p>
+            <p>Your data has been saved.</p>
+            <p style="margin-top: 30px;">You may close this window.</p>
+        </div>
+    `,
+    choices: 'NO_KEYS'
+};
+timeline.push(end_screen);
+
+
+// Global escape handler - Ctrl+C to end experiment
+document.addEventListener('keydown', function(event) {
+    // Check for Ctrl+C (key 'c' with ctrlKey pressed)
+    if (event.ctrlKey && event.key === 'c') {
+        event.preventDefault();
+        
+        // Save current data before ending
+        saveData();
+        
+        // Show abort message
+        document.body.innerHTML = `
+            <div style="font-size: 24px; text-align: center; padding: 50px;">
+                <h1>Experiment Aborted</h1>
+                <p>The experiment has been stopped.</p>
+                <p>Your data has been saved.</p>
+                <p style="margin-top: 30px;">You may close this window.</p>
+            </div>
+        `;
+        
+        // End the study in JATOS
+        jatos.endStudy();
+    }
+});
+
+// Start the experiment
+jsPsych.run(timeline);

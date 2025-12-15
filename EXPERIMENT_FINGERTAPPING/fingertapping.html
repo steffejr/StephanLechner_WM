@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Finger Tapping Experiment</title>
+    <script src="jatos.js"></script>
+
+
+    <script src="jspsych.js"></script>
+    <script src="jspsych-html-keyboard-response.js"></script>
+    <script src="jspsych-audio-keyboard-response.js"></script>
+    
+    <link href="jspsych.css" rel="stylesheet">
+
+
+    <!-- Load jsPsych CSS -->
+</head>
+<body>
+    <div id="jspsych-target"></div>
+    
+    <script>
+        jatos.onLoad(function() {
+            console.log("JATOS loaded, starting experiment...");
+            
+            // Load experiment.js as a regular script (not module)
+            const script = document.createElement('script');
+            script.src = 'experiment_fingertapping.js';
+            document.head.appendChild(script);
+        });
+    </script>
+</body>
+</html>
