@@ -1,0 +1,8 @@
+{
+  "sequence": [
+    "/experiments/WELCOME/welcome.html",
+    "/experiments/EXPERIMENT_TALK_ELICITATION/talk_elicitation.html",
+    "/experiments/GOODBYE/goodbye.html"
+  ],
+  "language": "zh"
+}

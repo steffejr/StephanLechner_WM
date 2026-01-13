@@ -1,0 +1,26 @@
+{
+  "sequence": [
+    "/experiments/WELCOME/welcome.html",
+
+    "/experiments/EXPERIMENT_TALK_ELICITATION/talk_elicitation.html",
+
+    "/experiments/GOODBYE/goodbye.html"
+  ],
+
+
+  // ------ LANGUAGE ----
+  "language": "en",   // de, zh
+  
+
+  "parameters": {
+
+    // ------ TALK ELICITATION ----
+    "talk_elicitation": {
+      // TESTING
+      "recording_duration": 10000      // 10 seconds
+      // ACTUAL EXPERIMENT
+      // "recording_duration": 600000  // 10 minutes
+    }
+  
+  }
+}

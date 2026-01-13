@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goodbye</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #finish-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #finish-btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You!</h1>
+    <p>Your participation is greatly appreciated.</p>
+    <p id="status">Saving your data...</p>
+    <p style="color: red;"><strong>Press <span style="font-weight: bold;">F11</span> again to exit fullscreen mode.</strong></p>    <p>Click Finish to close the window.</p>
+    <button id="finish-btn" style="display: none;">FINISH</button>
+
+    <script>
+        console.log("Goodbye screen loaded, saving all data");
+
+        // Get all experiment data from session
+        const experimentData = jatos.studySessionData.experimentData || {};
+        const subjectId = jatos.studySessionData.subjectId || 'unknown';
+
+        console.log("Subject ID:", subjectId);
+        console.log("Experiment data:", experimentData);
+
+        // Submit each experiment's data separately as CSV
+        // if (experimentData.fingerTapping) {
+        //     console.log("Submitting finger tapping data...");
+        //     jatos.submitResultData(experimentData.fingerTapping.csv, "text/csv");
+        //     jatos.appendResultData({
+        //         experiment: "finger_tapping",
+        //         ...experimentData.fingerTapping.metadata
+        //     });
+        // } else {
+        //     console.warn("No finger tapping data found");
+        // }
+
+        // if (experimentData.mindWandering) {
+        //     console.log("Submitting mind wandering data...");
+        //     jatos.submitResultData(experimentData.mindWandering.csv, "text/csv");
+        //     jatos.appendResultData({
+        //         experiment: "mind_wandering",
+        //         ...experimentData.mindWandering.metadata
+        //     });
+        // } else {
+        //     console.warn("No mind wandering data found");
+        // }
+
+        // Also create a combined JSON with all data
+        const combinedData = {
+            subject_id: subjectId,
+            session_date: new Date().toISOString(),
+            experiments: experimentData
+        };
+
+        jatos.appendResultData(combinedData);
+
+        console.log("All data submitted");
+
+        // Update status and show the FINISH button
+        setTimeout(() => {
+            document.getElementById('status').textContent = 'Data saved successfully!';
+            document.getElementById('finish-btn').style.display = 'inline-block';
+        }, 2000);
+
+        // End study only when the FINISH button is clicked
+        document.getElementById('finish-btn').onclick = function() {
+            jatos.endStudy();
+        };
+    </script>
+</body>
+</html>

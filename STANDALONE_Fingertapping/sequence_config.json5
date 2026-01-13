@@ -1,0 +1,27 @@
+{
+  "sequence": [
+    "/experiments/WELCOME/welcome.html",
+
+    "/experiments/EXPERIMENT_FINGERTAPPING/fingertapping.html",
+
+    "/experiments/GOODBYE/goodbye.html"
+  ],
+
+  // ------ LANGUAGE ----
+  "language": "en",
+  
+  "parameters": {
+
+    // ------ FINGER TAPPING ----
+    "finger_tapping": {
+      // TESTING
+      "main_duration": 2000, // 10 seconds
+      "break_duration": 5000 // 1 second
+      // ACTUAL EXPERIMENT
+      // "main_duration": 300000, // 5 minutes (300 seconds = 300000 ms)
+      // "break_duration": 60000 // 60 second
+    },
+
+
+  }
+}

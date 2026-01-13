@@ -1,0 +1,27 @@
+{
+  "sequence": [
+    "/experiments/WELCOME/welcome.html",
+    "/experiments/EXPERIMENT_MIND_WANDERING/mind_wandering.html",
+    "/experiments/GOODBYE/goodbye.html"
+  ],
+
+  
+  // ------ LANGUAGE ----
+  "language": "en",
+  
+
+  "parameters": {
+
+    // ------ MIND WANDERING ----
+    "mind_wandering": {
+      // TESTING
+        // "restingDuration": "function() { return 1; }", // Always 1 second  # WATCH OUT: requires string
+        // "trialRepetitions": 2
+      // ACTUAL EXPERIMENT
+        "restingDuration": "function() { return 4 * (Math.floor(Math.random() * 7) + 2); }",
+        "trialRepetitions": 3
+    // ------ -------------- ----
+
+    }
+  }
+}

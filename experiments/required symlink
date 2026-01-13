@@ -1,0 +1,4 @@
+create symlink to experiments in any new multi-experiment study
+
+ln -s ../experiments experiments
+ln -s ../experiments/loader.js loader.js

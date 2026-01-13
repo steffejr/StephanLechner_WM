@@ -1,0 +1,77 @@
+{
+  "sequence": [
+    "/experiments/WELCOME/welcome.html",
+    "/experiments/EXPERIMENT_BIOLOGICAL_MOTION/biological_motion.html",
+    "/experiments/EXPERIMENT_TALK_ELICITATION/talk_elicitation.html",
+    "/experiments/EXPERIMENT_FINGERTAPPING/fingertapping.html",
+    "/experiments/EXPERIMENT_MIND_WANDERING/mind_wandering.html",
+
+    "/experiments/GOODBYE/goodbye.html"
+  ],
+
+
+  // ------ LANGUAGE ----
+  "language": "zh",   // en, de, zh
+  
+
+  "parameters": {
+
+    // ------ TALK ELICITATION ----
+    "talk_elicitation": {
+      // TESTING
+      "recording_duration": 10000      // 10 seconds
+      // ACTUAL EXPERIMENT
+      // "recording_duration": 600000  // 10 minutes
+    },
+
+    
+
+    // ------ BIOLOGICAL MOTION ----
+    "biological_motion": {
+      // SHORT (MAIN) VERSION
+      // TESTING
+      "trials_per_block": 5,             // <-
+      "block_break_duration": 2000       // <-
+      // ACTUAL EXPERIMENT
+      // "trials_per_block": 90,        
+      // "block_break_duration": 15000  // 15 seconds
+      
+      // LONG VERSION
+      // TESTING
+      // "trials_per_block": 2,    
+      // "block_break_duration": 1000, 
+      // "ACTUAL EXPERIMENT
+      // "trials_per_block": 10,
+      // "block_break_duration": 15000
+    },
+
+
+
+    // ------ FINGER TAPPING ----
+    "finger_tapping": {
+    // TESTING
+      "main_duration": 2000,          // 2 seconds
+      "break_duration": 5000          // 1 second
+      // ACTUAL EXPERIMENT
+      // "main_duration": 300000,     // 5 minutes (300 seconds = 300000 ms)
+      // "break_duration": 15000      // 15 second
+    },
+
+
+
+    // ------ MIND WANDERING ----
+    "mind_wandering": {
+      // TESTING
+        // "restingDuration": "function() { return 1; }", // Always 1 second  # WATCH OUT: requires string
+        // "trialRepetitions": 2
+      // ACTUAL EXPERIMENT
+        "restingDuration": "function() { return 4 * (Math.floor(Math.random() * 7) + 2); }",
+        "trialRepetitions": 3
+    // ------ -------------- ----
+    }
+
+
+
+
+  }
+}

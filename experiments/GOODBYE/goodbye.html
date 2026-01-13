@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Goodbye</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #finish-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #finish-btn:hover {
+            background: #45a049;
+        }
+        #status {
+            font-weight: bold;
+            margin: 20px 0;
+            color: #333;
+        }
+        .success {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div id="goodbye-content"></div>
+    <div id="data-status">
+        <p id="status"></p>
+    </div>
+    
+    <!-- <button id="finish-btn">Finish</button> -->
+
+    <script>
+        
+        let dataSaved = false;
+        
+        function saveDataGuaranteed() {
+            if (dataSaved) return true;
+            
+            // force saving data
+            try {
+                if (jatos.studySessionData.experimentData) {
+                    // Clean data
+                    const cleanData = JSON.parse(JSON.stringify(
+                        jatos.studySessionData.experimentData,
+                        (key, value) => typeof value === 'number' ? Math.round(value * 100000) / 100000 : value
+                    ));
+                    
+                    // remove testing_mode
+                    if (cleanData.fingerTapping?.metadata?.testing_mode !== undefined) {
+                        delete cleanData.fingerTapping.metadata.testing_mode;
+                    }
+                    
+                    const finalData = {
+                        subject_id: jatos.studySessionData.subjectId || 'unknown',
+                        session_start: jatos.studySessionData.sessionStartTime,
+                        submission_time: new Date().toISOString(),
+                        experiments: cleanData,
+                        data_verification: "saved_" + Date.now()
+                    };
+                                        
+                    jatos.submitResultData(finalData);
+                    
+                    dataSaved = true;
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (error) {
+                return false;
+            }
+        }
+        
+        // display texxt
+        document.getElementById('goodbye-content').innerHTML = 
+            jatos.studySessionData.translations.goodbye_text;
+        
+        
+        const saveSuccess = saveDataGuaranteed();
+        
+        if (saveSuccess) {
+            document.getElementById('status').textContent = jatos.studySessionData.translations.goodbye_saved;
+            document.getElementById('status').className = "success";
+        } else {
+            document.getElementById('status').textContent = jatos.studySessionData.translations.goodbye_saved; // subject does not need to knwo about the failure
+            document.getElementById('status').className = "error";
+        }
+        
+        //button afer saving
+        setTimeout(() => {
+            
+            // Remove old button if exists
+            const oldBtn = document.getElementById('finish-btn');
+            if (oldBtn) oldBtn.remove();
+            
+            // Create new button
+            const btn = document.createElement('button');
+            btn.id = 'finish-btn';
+            // btn.textContent = 'Finish';
+            btn.textContent = jatos.studySessionData.translations.goodby_button;
+            btn.style.cssText = `
+                font-size: 18px;
+                padding: 10px 20px;
+                margin-top: 20px;
+                background: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: inline-block !important;
+            `;
+            
+            // add to page
+            document.getElementById('data-status').appendChild(btn);
+            
+            // button handler
+            btn.onclick = function() {
+                jatos.endStudy("Completed with saved data: " + (dataSaved ? "YES" : "NO"));
+            };
+            
+            // auto-end after 15s (safety)
+            setTimeout(() => {
+                if (document.body.contains(btn)) {
+                    jatos.endStudy("Auto-completed");
+                }
+            }, 15000);
+                        
+        }, 1000); // wait sec to ensure save completes
+        
+    </script>
+</body>
+</html>

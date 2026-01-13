@@ -1,0 +1,27 @@
+{
+  "sequence": [
+    "/experiments/WELCOME/welcome.html",
+
+    "/experiments/EXPERIMENT_BIOLOGICAL_MOTION/biological_motion.html",
+
+    "/experiments/GOODBYE/goodbye.html"
+  ],
+
+
+  // ------ LANGUAGE ----
+  "language": "en",
+  
+
+  "parameters": {
+      // ------ BIOLOGICAL MOTION ----
+    "biological_motion": {
+      // TESTING
+      "trials_per_block": 5,
+      "block_break_duration": 2000, // 2 seconds
+      // ACTUAL EXPERIMENT
+      // "trials_per_block": 90,
+      // "block_break_duration": 15000 // 15 seconds
+    },
+
+  }
+}

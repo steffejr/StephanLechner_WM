@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Point-Light Walker Experiment</title>
+    <script src="jspsych.js"></script>
+    <script src="jspsych-html-keyboard-response.js"></script>
+    <link href="jspsych.css" rel="stylesheet">
+      <style>
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial';
+    }
+    /* ADD THESE LINES */
+    #experiment-container {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial';
+        min-height: 100vh;
+    }
+    .jspsych-display-element {
+        background-color: black;
+        color: white;
+        min-height: 100vh; /* ADD THIS */
+    }
+    .jspsych-content {
+        color: white;
+        max-width: 1000px;
+        margin: 0 auto;
+        font-size: 24px;
+        line-height: 1.6;
+        position: absolute; /* ADD THIS */
+        top: 50%; /* ADD THIS */
+        left: 50%; /* ADD THIS */
+        transform: translate(-50%, -50%); /* ADD THIS */
+        width: 100%; /* ADD THIS */
+    }
+    .fixation {
+        font-size: 80px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+    <div id="jspsych-target"></div>
+    <script src="experiment_biological_motion.js"></script>
+</body>
+</html>

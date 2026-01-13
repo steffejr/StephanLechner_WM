@@ -1,0 +1,698 @@
+variable,en,en_html,de,de_html,zh,zh_html,it,it_html,tw,tw_html,it,it_html,pers,pers_html
+welcome_introduction,Welcome to the Study! Thank you for participating. Please read the instructions carefully. Please press F11 on your keyboard to enter fullscreen mode before continuing.,"<h1>Welcome to the Study!</h1><p>Thank you for participating. Please read the instructions carefully.</p><p>Please press F11 on your keyboard to enter fullscreen mode before continuing.</p><button id=""start-button"">Start Study</button>","Willkommen zur Studie! Vielen Dank für Ihre Teilnahme. Bitte lesen Sie die Anweisungen sorgfältig. Bitte drücken Sie F11 auf Ihrer Tastatur, um vor dem Weitergehen in den Vollbildmodus zu wechseln.","<h1>Willkommen zur Studie!</h1><p>Vielen Dank für Ihre Teilnahme. Bitte lesen Sie die Anweisungen sorgfältig.</p><p>Bitte drücken Sie F11 auf Ihrer Tastatur, um vor dem Weitergehen in den Vollbildmodus zu wechseln.</p><button id=""start-button"">Studie starten</button>",欢迎参与本研究！感谢您的参与。请仔细阅读以下说明。请按键盘上的 F11 键进入全屏模式，然后再继续。,"<h1>欢迎参与本研究！</h1><p>感谢您的参与。请仔细阅读以下说明。</p><p>请按键盘上的 F11 键进入全屏模式，然后再继续。</p><button id=""start-button"">开始</button>","Willkommen zur Studie! Vielen Dank für Ihre Teilnahme. Bitte lesen Sie die Anweisungen sorgfältig. Bitte drücken Sie F11 auf Ihrer Tastatur, um vor dem Weitergehen in den Vollbildmodus zu wechseln.","<h1>Willkommen zur Studie!</h1><p>Vielen Dank für Ihre Teilnahme. Bitte lesen Sie die Anweisungen sorgfältig.</p><p>Bitte drücken Sie F11 auf Ihrer Tastatur, um vor dem Weitergehen in den Vollbildmodus zu wechseln.</p><button id=""start-button"">Studie starten</button>",,,,,,
+welcome_popup_id,Please enter your subject ID:,,Bitte geben Sie Ihre Teilnehmer-ID ein:,Bitte geben Sie Ihre Teilnehmer-ID ein:,请输入您的考生编号：,,Bitte geben Sie Ihre Teilnehmer-ID ein:,Bitte geben Sie Ihre Teilnehmer-ID ein:,,,,,,
+welcome_popup_F11,Have you entered fullscreen mode by pressing F11?,,Haben Sie durch Drücken von F11 den Vollbildmodus aktiviert?,Haben Sie durch Drücken von F11 den Vollbildmodus aktiviert?,你按F11键进入全屏模式了吗？,,Haben Sie durch Drücken von F11 den Vollbildmodus aktiviert?,Haben Sie durch Drücken von F11 den Vollbildmodus aktiviert?,,,,,,
+welcome_popup_F11_reminder,Please press F11 to enter fullscreen mode before continuing.,,"Bitte drücken Sie F11, um vor dem Weitergehen in den Vollbildmodus zu wechseln.","Bitte drücken Sie F11, um vor dem Weitergehen in den Vollbildmodus zu wechseln.",请按F11进入全屏模式后再继续。,,"Bitte drücken Sie F11, um vor dem Weitergehen in den Vollbildmodus zu wechseln.","Bitte drücken Sie F11, um vor dem Weitergehen in den Vollbildmodus zu wechseln.",,,,,,
+welcome_phone,Mobile Device Detected. Please come back to this experiment on a PC or laptop. Completing the experiment on mobile devices may jeopardize data quality. Your link continues to be valid and no data has been saved.,<h1>Mobile Device Detected</h1><p>Please come back to this experiment on a PC or laptop.</p><p>Completing the experiment on mobile devices may jeopardize data quality.</p><p>Your link continues to be valid and no data has been saved.</p>,Mobiles Gerät erkannt. Bitte führen Sie dieses Experiment auf einem PC oder Laptop durch. Das Abschließen des Experiments auf mobilen Geräten kann die Datenqualität beeinträchtigen. Ihr Link bleibt gültig und es wurden keine Daten gespeichert.,<h1>Mobiles Gerät erkannt</h1><p>Bitte führen Sie dieses Experiment auf einem PC oder Laptop durch.</p><p>Das Abschließen des Experiments auf mobilen Geräten kann die Datenqualität beeinträchtigen.</p><p>Ihr Link bleibt gültig und es wurden keine Daten gespeichert.</p>,检测到移动设备。请使用电脑或笔记本电脑完成此实验。在移动设备上完成实验可能会影响数据质量。您的链接仍然有效，且未保存任何数据。,<h1>检测到移动设备</h1><p>请使用电脑或笔记本电脑完成此实验。</p><p>在移动设备上完成实验可能会影响数据质量。</p><p>您的链接仍然有效，且未保存任何数据。</p>,Mobiles Gerät erkannt. Bitte führen Sie dieses Experiment auf einem PC oder Laptop durch. Das Abschließen des Experiments auf mobilen Geräten kann die Datenqualität beeinträchtigen. Ihr Link bleibt gültig und es wurden keine Daten gespeichert.,<h1>Mobiles Gerät erkannt</h1><p>Bitte führen Sie dieses Experiment auf einem PC oder Laptop durch.</p><p>Das Abschließen des Experiments auf mobilen Geräten kann die Datenqualität beeinträchtigen.</p><p>Ihr Link bleibt gültig und es wurden keine Daten gespeichert.</p>,,,,,,
+welcome_phone_error,Mobile device detected. Experiment aborted.,Mobile device detected. Experiment aborted.,Mobiles Gerät erkannt. Experiment abgebrochen.,Mobiles Gerät erkannt. Experiment abgebrochen.,检测到移动设备。实验中止。,检测到移动设备。实验中止。,Mobiles Gerät erkannt. Experiment abgebrochen.,Mobiles Gerät erkannt. Experiment abgebrochen.,,,,,,
+goodbye_text,Thank You! Your participation is greatly appreciated. Saving your data... Press F11 again to exit fullscreen mode. Click Finish to close the window.,"<h1>Thank You!</h1><p>Your participation is greatly appreciated.</p><p id=""status"">Saving your data...</p><p style=""color: red;""><strong>Press <span style=""font-weight: bold;"">F11</span> again to exit fullscreen mode.</strong></p><p>Click <button id=""finish-btn"" style=""display: none;"">Finish</button> to close the window.</p>","Vielen Dank! Ihre Teilnahme wird sehr geschätzt. Ihre Daten werden gespeichert... Drücken Sie erneut F11, um den Vollbildmodus zu verlassen. Klicken Sie auf Fertig, um das Fenster zu schließen.","<h1>Vielen Dank!</h1><p>Ihre Teilnahme wird sehr geschätzt.</p><p id=""status"">Ihre Daten werden gespeichert...</p><p style=""color: red;""><strong>Drücken Sie <span style=""font-weight: bold;"">F11</span> erneut, um den Vollbildmodus zu verlassen.</strong></p><p>Klicken Sie auf <button id=""finish-btn"" style=""display: none;"">Fertig</button>, um das Fenster zu schließen.</p>",谢谢！非常感谢您的参与。正在保存数据...再次按 F11 键退出全屏模式。点击“完成”关闭窗口。,"<h1>谢谢！</h1><p>非常感谢您的参与。</p><p id=""status"">正在保存数据...</p><p style=""color: red;""><strong>再次按 <span style=""font-weight: bold;"">F11</span> 键退出全屏模式。</strong></p><p>点击 <button id=""finish-btn"" style=""display: none;"">结束</button> 关闭窗口。</p>","Vielen Dank! Ihre Teilnahme wird sehr geschätzt. Ihre Daten werden gespeichert... Drücken Sie erneut F11, um den Vollbildmodus zu verlassen. Klicken Sie auf Fertig, um das Fenster zu schließen.","<h1>Vielen Dank!</h1><p>Ihre Teilnahme wird sehr geschätzt.</p><p id=""status"">Ihre Daten werden gespeichert...</p><p style=""color: red;""><strong>Drücken Sie <span style=""font-weight: bold;"">F11</span> erneut, um den Vollbildmodus zu verlassen.</strong></p><p>Klicken Sie auf <button id=""finish-btn"" style=""display: none;"">Fertig</button>, um das Fenster zu schließen.</p>",,,,,,
+goodbye_saved,Data saved!,Data saved!,Daten gespeichert!,Daten gespeichert!,数据已保存！,数据已保存！,,,,,,,,
+goodbye_save_failed,Data save failed!,Data save failed!,Datenspeicherung nicht erfolgreich!,Datenspeicherung nicht erfolgreich!,数据保存失败！,数据保存失败！,,,,,,,,
+goodby_button,Finish,Finish,Fertig,Fertig,结束,结束,Fertig,Fertig,,,,,,
+fingertapping_introduction,"Finger Tapping Task. Next, you will complete a task where you tap a keyboard key rhythmically at two different speeds: one fast and one slow. You will hear beeps at either of these speeds. Tap along with them. When the beeps stop, keep tapping at the same rhythm while keeping your gaze on the fixation cross (+). Each speed condition will last 5 minutes. Try to maintain the original speed set by the tones. Once the fixation cross disappears, you can stop tapping. Important: Use the index finger of your dominant hand to press the 'F' key. If you are left-handed, use your left index finger. If you are right-handed, use your right index finger. Press the SPACEBAR with any finger to proceed through instructions. During tapping, use ONLY the 'F' key with your index finger. Press SPACEBAR to begin.","<div style=""font-size: 20px; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.4;""><h1>Finger Tapping Task</h1><p>Next, you will complete a task where you tap a keyboard key rhythmically at two different speeds: one fast and one slow.</p><p>You will hear beeps at either of these speeds. Tap along with them.</p><p>When the beeps stop, keep tapping at the same rhythm while keeping your gaze on the fixation cross (+). Each speed condition will last 5 minutes. Try to maintain the original speed set by the tones.</p><p>Once the fixation cross disappears, you can stop tapping.</p><p><strong>Important:</strong> Use the index finger of your dominant hand to press the 'F' key. If you are left-handed, use your left index finger. If you are right-handed, use your right index finger.</p><p>Press the SPACEBAR with any finger to proceed through instructions. During tapping, use ONLY the 'F' key with your index finger.</p><p style=""margin-top: 30px; font-weight: bold;"">Press SPACEBAR to begin.</p></div>","Fingerklopfen-Aufgabe. Als Nächstes werden Sie eine Aufgabe durchführen, bei der Sie eine Tastaturtaste rhythmisch in zwei verschiedenen Geschwindigkeiten tippen: einmal schnell und einmal langsam. Sie hören Pieptöne in diesen Geschwindigkeiten. Tippen Sie im Takt mit. Wenn die Pieptöne aufhören, tippen Sie weiterhin im selben Rhythmus, während Sie auf das Fixationskreuz (+) blicken. Jede Geschwindigkeitsbedingung dauert 5 Minuten. Versuchen Sie, die ursprüngliche durch die Töne vorgegebene Geschwindigkeit beizubehalten. Sobald das Fixationskreuz verschwindet, können Sie aufhören zu tippen. Wichtig: Verwenden Sie den Zeigefinger Ihrer dominanten Hand, um die 'F'-Taste zu drücken. Wenn Sie Linkshänder sind, verwenden Sie Ihren linken Zeigefinger. Wenn Sie Rechtshänder sind, verwenden Sie Ihren rechten Zeigefinger. Drücken Sie die LEERTASTE mit einem beliebigen Finger, um mit den Anweisungen fortzufahren. Tippen Sie während der Aufgabe NUR mit dem Zeigefinger auf die 'F'-Taste. Drücken Sie die LEERTASTE, um zu beginnen.","<div style=""font-size: 20px; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.4;""><h1>Fingerklopfen-Aufgabe</h1><p>Als Nächstes werden Sie eine Aufgabe durchführen, bei der Sie eine Tastaturtaste rhythmisch in zwei verschiedenen Geschwindigkeiten tippen: einmal schnell und einmal langsam.</p><p>Sie hören Pieptöne in diesen Geschwindigkeiten. Tippen Sie im Takt mit.</p><p>Wenn die Pieptöne aufhören, tippen Sie weiterhin im selben Rhythmus, während Sie auf das Fixationskreuz (+) blicken. Jede Geschwindigkeitsbedingung dauert 5 Minuten. Versuchen Sie, die ursprüngliche durch die Töne vorgegebene Geschwindigkeit beizubehalten.</p><p>Sobald das Fixationskreuz verschwindet, können Sie aufhören zu tippen.</p><p><strong>Wichtig:</strong> Verwenden Sie den Zeigefinger Ihrer dominanten Hand, um die 'F'-Taste zu drücken. Wenn Sie Linkshänder sind, verwenden Sie Ihren linken Zeigefinger. Wenn Sie Rechtshänder sind, verwenden Sie Ihren rechten Zeigefinger.</p><p>Drücken Sie die LEERTASTE mit einem beliebigen Finger, um mit den Anweisungen fortzufahren. Tippen Sie während der Aufgabe NUR mit dem Zeigefinger auf die 'F'-Taste.</p><p style=""margin-top: 30px; font-weight: bold;"">Drücken Sie die LEERTASTE, um zu beginnen.</p></div>",手指敲击练习。接下来，您将完成一项练习，需要以两种不同的速度（快速和慢速）有节奏地敲击键盘按键。您会听到两种速度对应的提示音。请跟随提示音敲击。提示音停止后，请保持相同的节奏继续敲击，同时注视注视十字 (+)。每种速度持续 5 分钟。请尽量保持提示音设定的速度。注视十字消失后，即可停止敲击。重要提示：请使用惯用手的食指按下“F”键。如果您是左撇子，请使用左手食指；如果您是右撇子，请使用右手食指。使用任意手指按下空格键继续执行后续说明。敲击过程中，请仅使用食指按下“F”键。按下空格键开始练习。,"<div style=""font-size: 20px; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.4;""><h1>手指敲击练习</h1><p>接下来，您将完成一项练习，需要以两种不同的速度（快速和慢速）有节奏地敲击键盘按键。</p><p>您会听到两种速度对应的提示音。请跟随提示音敲击。</p><p>提示音停止后，请保持相同的节奏继续敲击，同时注视注视十字 (+)。每种速度持续 5 分钟。请尽量保持提示音设定的速度。</p><p>注视十字消失后，即可停止敲击。</p><p><strong>重要提示：</strong>请使用惯用手的食指按下“F”键。如果您是左撇子，请使用左手食指；如果您是右撇子，请使用右手食指。</p><p>使用任意手指按下空格键继续执行后续说明。敲击过程中，请仅使用食指按下“F”键。</p><p style=""margin-top: 30px; font-weight: bold;"">按下空格键开始练习。</p></div>","Fingerklopfen-Aufgabe. Als Nächstes werden Sie eine Aufgabe durchführen, bei der Sie eine Tastaturtaste rhythmisch in zwei verschiedenen Geschwindigkeiten tippen: einmal schnell und einmal langsam. Sie hören Pieptöne in diesen Geschwindigkeiten. Tippen Sie im Takt mit. Wenn die Pieptöne aufhören, tippen Sie weiterhin im selben Rhythmus, während Sie auf das Fixationskreuz (+) blicken. Jede Geschwindigkeitsbedingung dauert 5 Minuten. Versuchen Sie, die ursprüngliche durch die Töne vorgegebene Geschwindigkeit beizubehalten. Sobald das Fixationskreuz verschwindet, können Sie aufhören zu tippen. Wichtig: Verwenden Sie den Zeigefinger Ihrer dominanten Hand, um die 'F'-Taste zu drücken. Wenn Sie Linkshänder sind, verwenden Sie Ihren linken Zeigefinger. Wenn Sie Rechtshänder sind, verwenden Sie Ihren rechten Zeigefinger. Drücken Sie die LEERTASTE mit einem beliebigen Finger, um mit den Anweisungen fortzufahren. Tippen Sie während der Aufgabe NUR mit dem Zeigefinger auf die 'F'-Taste. Drücken Sie die LEERTASTE, um zu beginnen.","<div style=""font-size: 20px; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.4;""><h1>Fingerklopfen-Aufgabe</h1><p>Als Nächstes werden Sie eine Aufgabe durchführen, bei der Sie eine Tastaturtaste rhythmisch in zwei verschiedenen Geschwindigkeiten tippen: einmal schnell und einmal langsam.</p><p>Sie hören Pieptöne in diesen Geschwindigkeiten. Tippen Sie im Takt mit.</p><p>Wenn die Pieptöne aufhören, tippen Sie weiterhin im selben Rhythmus, während Sie auf das Fixationskreuz (+) blicken. Jede Geschwindigkeitsbedingung dauert 5 Minuten. Versuchen Sie, die ursprüngliche durch die Töne vorgegebene Geschwindigkeit beizubehalten.</p><p>Sobald das Fixationskreuz verschwindet, können Sie aufhören zu tippen.</p><p><strong>Wichtig:</strong> Verwenden Sie den Zeigefinger Ihrer dominanten Hand, um die 'F'-Taste zu drücken. Wenn Sie Linkshänder sind, verwenden Sie Ihren linken Zeigefinger. Wenn Sie Rechtshänder sind, verwenden Sie Ihren rechten Zeigefinger.</p><p>Drücken Sie die LEERTASTE mit einem beliebigen Finger, um mit den Anweisungen fortzufahren. Tippen Sie während der Aufgabe NUR mit dem Zeigefinger auf die 'F'-Taste.</p><p style=""margin-top: 30px; font-weight: bold;"">Drücken Sie die LEERTASTE, um zu beginnen.</p></div>",,,,,,
+fingertapping_break,Take a Break. The next condition will start in 60 seconds.,"<div style=""font-size: 24px; text-align: center;""><h2>Take a Break</h2><p>The next condition will start in 60 seconds.</p><p style=""margin-top: 30px;"">Rest your finger.</p></div>",Machen Sie eine Pause. Die nächste Bedingung beginnt in 60 Sekunden.,"<div style=""font-size: 24px; text-align: center;""><h2>Machen Sie eine Pause</h2><p>Die nächste Bedingung beginnt in 60 Sekunden.</p><p style=""margin-top: 30px;"">Ruhen Sie Ihren Finger aus.</p></div>",休息一下。下一个条件将在 60 秒后开始。,"<div style=""font-size: 24px; text-align: center;""><h2>休息一下</h2><p>下一个条件将在 60 秒后开始。</p><p style=""margin-top: 30px;"">休息您的手指。</p></div>",Machen Sie eine Pause. Die nächste Bedingung beginnt in 60 Sekunden.,"<div style=""font-size: 24px; text-align: center;""><h2>Machen Sie eine Pause</h2><p>Die nächste Bedingung beginnt in 60 Sekunden.</p><p style=""margin-top: 30px;"">Ruhen Sie Ihren Finger aus.</p></div>",,,,,,
+talk_elicitation_introduction,"Picture Description Task
+Please talk about the picture you see for as long as you can.
+A total of 10 minutes has been reserved for you to interact with the picture.
+You can talk about anything that you want, as freely as you want.
+
+You can for example: describe colors, scenes, features or contents,
+talk about emotions the picture elicits, share memories or personal associations,
+make speculations about what things mean, relate it to your own life or experiences.
+
+
+The most important thing is that you talk for as long as you can.
+Click Continue when you're ready to see the picture and begin.
+","`<h2>Picture Description Task</h2> <p>Please talk about the picture you see for as long as you can.</p> <p>A total of 10 minutes has been reserved for you to interact with the picture.</p> <p>You can talk about anything that you want, as freely as you want. <br><br>You can for example: describe colors, scenes, features or contents, <br> talk about emotions the picture elicits, share memories or personal associations, <br> make speculations about what things mean, relate it to your own life or experiences.</p> <p><br><strong>The most important thing is that you talk for as long as you can.</strong></p> <p>Click <strong>Continue</strong> when you're ready to see the picture and begin.</p>`","Bildbeschreibungsaufgabe Bitte beschreiben Sie das Bild, das Sie sehen, so lange wie möglich. Insgesamt stehen Ihnen 10 Minuten zur Verfügung, um mit dem Bild zu interagieren. Sie können über alles sprechen, was Sie möchten, so frei wie Sie möchten. Sie können beispielsweise: Farben, Szenen, Merkmale oder Inhalte beschreiben, über die durch das Bild hervorgerufenen Emotionen sprechen, Erinnerungen oder persönliche Assoziationen teilen, Spekulationen über die Bedeutung von Dingen anstellen, Bezug zu Ihrem eigenen Leben oder Erfahrungen herstellen. Das Wichtigste ist, dass Sie so lange wie möglich sprechen. Klicken Sie auf Weiter, wenn Sie bereit sind, das Bild zu sehen und zu beginnen.","<h2>Bildbeschreibungsaufgabe</h2> <p>Bitte beschreiben Sie das Bild, das Sie sehen, so lange wie möglich.</p> <p>Insgesamt stehen Ihnen 10 Minuten zur Verfügung, um mit dem Bild zu interagieren.</p> <p>Sie können über alles sprechen, was Sie möchten, so frei wie Sie möchten. <br><br>Sie können beispielsweise: Farben, Szenen, Merkmale oder Inhalte beschreiben, <br> über die durch das Bild hervorgerufenen Emotionen sprechen, Erinnerungen oder persönliche Assoziationen teilen, <br> Spekulationen über die Bedeutung von Dingen anstellen, Bezug zu Ihrem eigenen Leben oder Erfahrungen herstellen.</p> <p><br><strong>Das Wichtigste ist, dass Sie so lange wie möglich sprechen.</strong></p> <p>Klicken Sie auf <strong>Weiter</strong>, wenn Sie bereit sind, das Bild zu sehen und zu beginnen.</p>","图片描述任务
+请尽可能长时间地描述你看到的图片。
+我们为你预留了10分钟的时间与图片互动。
+你可以畅所欲言，想说什么就说什么。
+例如：描述颜色、场景、特征或内容；
+谈谈图片引发的情感；分享回忆或个人联想；
+推测图片的含义；将其与你自己的生活或经历联系起来。
+最重要的是，尽可能长时间地描述。
+准备好后，点击“继续”按钮开始观看图片。",<h2>图片描述任务</h2> <p>请尽可能长时间地描述你看到的图片。</p> <p>我们为你预留了10分钟的时间与图片互动。</p> <p>你可以畅所欲言，想说什么就说什么。 <br><br>例如：描述颜色、场景、特征或内容； <br> 谈谈图片引发的情感；分享回忆或个人联想； <br> 推测图片的含义；将其与你自己的生活或经历联系起来。</p> <p><br><strong>最重要的是，尽可能长时间地描述。</strong></p> <p>准备好后，点击<strong>继续</strong>按钮开始观看图片。</p>,"Bildbeschreibungsaufgabe Bitte beschreiben Sie das Bild, das Sie sehen, so lange wie möglich. Insgesamt stehen Ihnen 10 Minuten zur Verfügung, um mit dem Bild zu interagieren. Sie können über alles sprechen, was Sie möchten, so frei wie Sie möchten. Sie können beispielsweise: Farben, Szenen, Merkmale oder Inhalte beschreiben, über die durch das Bild hervorgerufenen Emotionen sprechen, Erinnerungen oder persönliche Assoziationen teilen, Spekulationen über die Bedeutung von Dingen anstellen, Bezug zu Ihrem eigenen Leben oder Erfahrungen herstellen. Das Wichtigste ist, dass Sie so lange wie möglich sprechen. Klicken Sie auf Weiter, wenn Sie bereit sind, das Bild zu sehen und zu beginnen.","<h2>Bildbeschreibungsaufgabe</h2> <p>Bitte beschreiben Sie das Bild, das Sie sehen, so lange wie möglich.</p> <p>Insgesamt stehen Ihnen 10 Minuten zur Verfügung, um mit dem Bild zu interagieren.</p> <p>Sie können über alles sprechen, was Sie möchten, so frei wie Sie möchten. <br><br>Sie können beispielsweise: Farben, Szenen, Merkmale oder Inhalte beschreiben, <br> über die durch das Bild hervorgerufenen Emotionen sprechen, Erinnerungen oder persönliche Assoziationen teilen, <br> Spekulationen über die Bedeutung von Dingen anstellen, Bezug zu Ihrem eigenen Leben oder Erfahrungen herstellen.</p> <p><br><strong>Das Wichtigste ist, dass Sie so lange wie möglich sprechen.</strong></p> <p>Klicken Sie auf <strong>Weiter</strong>, wenn Sie bereit sind, das Bild zu sehen und zu beginnen.</p>",,,,,,
+button_continue,continue,Continue,Weiter,Weiter,继续,,Weiter,Weiter,,,,,,
+button_start_recording,Start Recording,"<div style=""position: fixed; top: 20px; right: 20px; z-index: 1001;""> <button id=""start-btn"" style=""font-size: 16px; padding: 8px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px;""> Start Recording </button> </div>",Aufnahme starten,"<div style=""position: fixed; top: 20px; right: 20px; z-index: 1001;""> <button id=""start-btn"" style=""font-size: 16px; padding: 8px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px;""> Aufnahme starten </button> </div>",开始录制,"<div style=""position: fixed; top: 20px; right: 20px; z-index: 1001;""> <button id=""start-btn"" style=""font-size: 16px; padding: 8px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px;""> 开始录制 </button> </div>",Aufnahme starten,"<div style=""position: fixed; top: 20px; right: 20px; z-index: 1001;""> <button id=""start-btn"" style=""font-size: 16px; padding: 8px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px;""> Aufnahme starten </button> </div>",,,,,,
+button_done_talking,I am done talking! ,"<div style=""position: fixed; top: 30px; right: 20px; z-index: 1001;""> <button id=""end-btn"" style=""font-size: 16px; padding: 8px 20px; background: #f44336; color: white; border: none; border-radius: 4px;""> I am done talking! </button> </div>",Ich bin fertig mit dem Sprechen!,"<div style=""position: fixed; top: 30px; right: 20px; z-index: 1001;""> <button id=""end-btn"" style=""font-size: 16px; padding: 8px 20px; background: #f44336; color: white; border: none; border-radius: 4px;""> Ich bin fertig mit Sprechen! </button> </div>",我不说了！,"<div style=""position: fixed; top: 30px; right: 20px; z-index: 1001;""> <button id=""end-btn"" style=""font-size: 16px; padding: 8px 20px; background: #f44336; color: white; border: none; border-radius: 4px;""> 我不说了！ </button> </div>",Ich bin fertig mit Sprechen!,"<div style=""position: fixed; top: 30px; right: 20px; z-index: 1001;""> <button id=""end-btn"" style=""font-size: 16px; padding: 8px 20px; background: #f44336; color: white; border: none; border-radius: 4px;""> Ich bin fertig mit Sprechen! </button> </div>",,,,,,
+talk_elicitation_thanks,"Thank you for your effort!
+Your recording has been saved.
+Click the button below to continue.
+
+","<div style=""text-align: center; padding: 100px;""> <h2>Thank you for your effort!</h2> <p>Your recording has been saved.</p> <p>Click the button below to continue.</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> Continue </button> </div> `;","Vielen Dank für Ihre Mühe! Ihre Aufnahme wurde gespeichert. Klicken Sie auf die Schaltfläche unten, um fortzufahren.","<div style=""text-align: center; padding: 100px;""> <h2>Vielen Dank für Ihre Mühe!</h2> <p>Ihre Aufnahme wurde gespeichert.</p> <p>Klicken Sie auf die Schaltfläche unten, um fortzufahren.</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> Weiter </button> </div>;","感谢您的参与！
+您的录音已保存。
+点击下方按钮继续。","<div style=""text-align: center; padding: 100px;""> <h2>感谢您的参与！</h2> <p>您的录音已保存。</p> <p>点击下方按钮继续。</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> 继续 </button> </div>","Vielen Dank für Ihre Mühe! Ihre Aufnahme wurde gespeichert. Klicken Sie auf die Schaltfläche unten, um fortzufahren. Weiter","<div style=""text-align: center; padding: 100px;""> <h2>Vielen Dank für Ihre Mühe!</h2> <p>Ihre Aufnahme wurde gespeichert.</p> <p>Klicken Sie auf die Schaltfläche unten, um fortzufahren.</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> Weiter </button> </div>;",,,,,,
+text_aborted,"Experiment Aborted
+The experiment has been stopped.
+Your data has been saved.
+You may close this window.","<h1>Experiment Aborted</h1> <p>The experiment has been stopped.</p> <p>Your data has been saved.</p> <p style=""margin-top: 30px;"">You may close this window.</p> </div>",Experiment abgebrochen Das Experiment wurde gestoppt. Ihre Daten wurden gespeichert. Sie können dieses Fenster schließen.,"<h1>Experiment abgebrochen</h1> <p>Das Experiment wurde gestoppt.</p> <p>Ihre Daten wurden gespeichert.</p> <p style=""margin-top: 30px;"">Sie können dieses Fenster schließen.</p> </div>","实验已中止
+实验已停止。
+您的数据已保存。
+您可以关闭此窗口。","<h1>实验已中止</h1> <p>实验已停止。</p> <p>您的数据已保存。</p> <p style=""margin-top: 30px;"">您可以关闭此窗口。</p> </div>",Experiment abgebrochen Das Experiment wurde gestoppt. Ihre Daten wurden gespeichert. Sie können dieses Fenster schließen.,"<h1>Experiment abgebrochen</h1> <p>Das Experiment wurde gestoppt.</p> <p>Ihre Daten wurden gespeichert.</p> <p style=""margin-top: 30px;"">Sie können dieses Fenster schließen.</p> </div>",,,,,,
+biological_motion_introduction_page_1,"Biological Motion Task
+In this task you will be presented with moving dots that represent walking people. You will be asked to respond for 2 categories of the walkers: mood of walker and speed of walker.
+You will complete two blocks of trials. In one block, you'll judge the MOOD (neutral vs sad). In the other block, you'll judge the SPEED (slow vs fast).
+Each block will show you which question to answer. Respond as fast as possible by pressing the correct keyboard keys.","<div style=""font-size: 24px; text-align: center; color: white;"">
+  <h1>Biological Motion Task</h1>
+  <p>In this task you will be presented with moving dots that represent walking people. You will be asked to respond for 2 categories of the walkers: mood of walker and speed of walker.</p>
+  
+  <p>You will complete two blocks of trials. In one block, you'll judge the MOOD (neutral vs sad). In the other block, you'll judge the SPEED (slow vs fast).</p>
+  
+  <p>Each block will show you which question to answer. Respond as fast as possible by pressing the correct keyboard keys.</p>
+</div>","Biologische Bewegung Aufgabe
+In dieser Aufgabe werden Ihnen sich bewegende Punkte präsentiert, die gehende Personen darstellen. Sie werden gebeten, für 2 Kategorien der Läufer zu antworten: Stimmung des Läufers und Geschwindigkeit des Läufers.
+
+Sie werden zwei Blöcke von Durchgängen absolvieren. In einem Block beurteilen Sie die STIMMUNG (neutral vs. traurig). Im anderen Block beurteilen Sie die GESCHWINDIGKEIT (langsam vs. schnell).
+
+Jeder Block zeigt Ihnen, welche Frage Sie beantworten sollen. Reagieren Sie so schnell wie möglich, indem Sie die richtigen Tastaturtasten drücken.","<div style=""font-size: 24px; text-align: center; color: white;""> <h1>Biologische Bewegung Aufgabe</h1> <p>In dieser Aufgabe werden Ihnen sich bewegende Punkte präsentiert, die gehende Personen darstellen. Sie werden gebeten, für 2 Kategorien der Läufer zu antworten: Stimmung des Läufers und Geschwindigkeit des Läufers.</p> <p>Sie werden zwei Blöcke von Durchgängen absolvieren. In einem Block beurteilen Sie die STIMMUNG (neutral vs. traurig). Im anderen Block beurteilen Sie die GESCHWINDIGKEIT (langsam vs. schnell).</p> <p>Jeder Block zeigt Ihnen, welche Frage Sie beantworten sollen. Reagieren Sie so schnell wie möglich, indem Sie die richtigen Tastaturtasten drücken.</p> </div>
+
+","生物运动任务
+在本任务中，您将看到代表行走者的移动点。您需要为行走者的两个类别做出反应：行走者的情绪和行走者的速度。
+
+您将完成两个试验块。在一个块中，您将判断情绪（中性 vs 悲伤）。在另一个块中，您将判断速度（慢 vs 快）。
+
+每个块都会告诉您要回答哪个问题。请尽快通过按下正确的键盘按键来做出反应。","<div style=""font-size: 24px; text-align: center; color: white;""> <h1>生物运动任务</h1> <p>在本任务中，您将看到代表行走者的移动点。您需要为行走者的两个类别做出反应：行走者的情绪和行走者的速度。</p> <p>您将完成两个试验块。在一个块中，您将判断情绪（中性 vs 悲伤）。在另一个块中，您将判断速度（慢 vs 快）。</p> <p>每个块都会告诉您要回答哪个问题。请尽快通过按下正确的键盘按键来做出反应。</p> </div>
+
+",,,,,,,,
+biological_motion_introduction_page_2,"Biological Motion Task - Examples
+MOOD
+Please judge the MOOD of the walker.
+Is he neutral or sad?
+NEUTRAL (1) | SAD (3)
+[Example GIF: Neutral Walker]
+Neutral
+[Example GIF: Sad Walker]
+Sad
+SPEED
+Please judge the SPEED of the walker.
+How fast is the walker going?
+SLOW (1) | FAST (3)
+[Example GIF: Slow Walker]
+Slow
+[Example GIF: Fast Walker]
+Fast","<div style=""color: white; width: 100%; padding: 20px; box-sizing: border-box;"">
+  <h1 style=""text-align: center; font-size: 32px; margin-bottom: 30px;"">Biological Motion Task - Examples</h1>
+
+  <div style=""display: flex; width: 100%; gap: 20px;"">
+    
+    <!-- MOOD -->
+    <div style=""flex: 1.5; border: 2px solid white; padding: 15px;"">
+      <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">MOOD</h3>
+      <p style=""text-align: center; margin-bottom: 10px;"">Please judge the MOOD of the walker.<br>Is he neutral or sad?</p>
+      <p style=""text-align: center; margin-bottom: 15px;"">NEUTRAL (1) | SAD (3)</p>
+      <div style=""display: flex;"">
+        <div style=""flex: 1; text-align: center;"">
+          <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 90%;"">
+          <div>Neutral</div>
+        </div>
+        <div style=""flex: 1; text-align: center;"">
+          <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_sad_slow_unscrambled.gif"" style=""width: 90%;"">
+          <div>Sad</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SPEED -->
+    <div style=""flex: 1.5; border: 2px solid white; padding: 15px;"">
+      <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">SPEED</h3>
+      <p style=""text-align: center; margin-bottom: 10px;"">Please judge the SPEED of the walker.<br>How fast is the walker going?</p>
+      <p style=""text-align: center; margin-bottom: 15px;"">SLOW (1) | FAST (3)</p>
+      <div style=""display: flex;"">
+        <div style=""flex: 1; text-align: center;"">
+          <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;"">
+          <div>Slow</div>
+        </div>
+        <div style=""flex: 1; text-align: center;"">
+          <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_fast_unscrambled.gif"" style=""width: 95%;"">
+          <div>Fast</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>","Biologische Bewegung Aufgabe - Beispiele
+
+STIMMUNG
+Bitte beurteilen Sie die STIMMUNG des Läufers.
+Ist er neutral oder traurig?
+NEUTRAL (1) | TRAURIG (3)
+[Example GIF: Neutral Walker]
+Neutral
+[Example GIF: Sad Walker]
+Traurig
+
+GESCHWINDIGKEIT
+Bitte beurteilen Sie die GESCHWINDIGKEIT des Läufers.
+Wie schnell geht der Läufer?
+SLOW (1) | FAST (3)
+[Example GIF: Slow Walker]
+Langsam
+[Example GIF: Fast Walker]
+Schnell","<div style=""color: white; width: 100%; padding: 20px; box-sizing: border-box;""> <h1 style=""text-align: center; font-size: 32px; margin-bottom: 30px;"">Biologische Bewegung Aufgabe - Beispiele</h1> <div style=""display: flex; width: 100%; gap: 20px;""> <!-- STIMMUNG --> <div style=""flex: 1.5; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">STIMMUNG</h3> <p style=""text-align: center; margin-bottom: 10px;"">Bitte beurteilen Sie die STIMMUNG des Läufers.<br>Ist er neutral oder traurig?</p> <p style=""text-align: center; margin-bottom: 15px;"">NEUTRAL (1) | TRAURIG (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 90%;""> <div>Neutral</div> </div> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_sad_slow_unscrambled.gif"" style=""width: 90%;""> <div>Traurig</div> </div> </div> </div> <!-- GESCHWINDIGKEIT --> <div style=""flex: 1.5; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">GESCHWINDIGKEIT</h3> <p style=""text-align: center; margin-bottom: 10px;"">Bitte beurteilen Sie die GESCHWINDIGKEIT des Läufers.<br>Wie schnell geht der Läufer?</p> <p style=""text-align: center; margin-bottom: 15px;"">SLOW (1) | FAST (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""> <div>Langsam</div> </div> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_fast_unscrambled.gif"" style=""width: 95%;""> <div>Schnell</div> </div> </div> </div> </div> </div>
+
+","生物运动任务 - 示例
+
+情绪
+请判断行走者的情绪。
+他是中性还是悲伤？
+中性 (1) | 悲伤 (3)
+[Example GIF: Neutral Walker]
+中性
+[Example GIF: Sad Walker]
+悲伤
+
+速度
+请判断行走者的速度。
+行走者走得多快？
+慢 (1) | 快 (3)
+[Example GIF: Slow Walker]
+慢
+[Example GIF: Fast Walker]
+快","<div style=""color: white; width: 100%; padding: 20px; box-sizing: border-box;""> <h1 style=""text-align: center; font-size: 32px; margin-bottom: 30px;"">生物运动任务 - 示例</h1> <div style=""display: flex; width: 100%; gap: 20px;""> <!-- 情绪 --> <div style=""flex: 1.5; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">情绪</h3> <p style=""text-align: center; margin-bottom: 10px;"">请判断行走者的情绪。<br>他是中性还是悲伤？</p> <p style=""text-align: center; margin-bottom: 15px;"">中性 (1) | 悲伤 (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 90%;""> <div>中性</div> </div> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_sad_slow_unscrambled.gif"" style=""width: 90%;""> <div>悲伤</div> </div> </div> </div> <!-- 速度 --> <div style=""flex: 1.5; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">速度</h3> <p style=""text-align: center; margin-bottom: 10px;"">请判断行走者的速度。<br>行走者走得多快？</p> <p style=""text-align: center; margin-bottom: 15px;"">慢 (1) | 快 (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""> <div>慢</div> </div> <div style=""flex: 1; text-align: center;""> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_fast_unscrambled.gif"" style=""width: 95%;""> <div>快</div> </div> </div> </div> </div> </div>
+
+",,,,,,,,
+biological_motion_introduction_page_1_long,"Biological Motion Task
+In this task you will be presented with moving dots that represent walking people. You will be asked to respond for 3 categories of the walkers: direction of walker, mood of walker, and speed of walker. The walkers will be presented in groups. Before each group starts the screen will tell you what quality of the walker you should look out for.
+Then, for the next few short videos respond as fast as possible by pressing the correct keyboard keys until you are instructed to pay attention to a different quality.","<div style=""font-size: 24px; text-align: center; color: white;"">
+  <h1>Biological Motion Task</h1>
+  <p>In this task you will be presented with moving dots that represent walking people. You will be asked to respond for 3 categories of the walkers: direction of walker, mood of walker, and speed of walker. The walkers will be presented in groups. Before each group starts the screen will tell you what quality of the walker you should look out for. </p>
+  
+<P>Then, for the next few short videos respond as fast as possible by pressing the correct keyboard keys until you are instructed to pay attention to a different quality.</p>
+  
+ 
+</div>","Biologische Bewegung Aufgabe
+In dieser Aufgabe werden Ihnen sich bewegende Punkte präsentiert, die gehende Personen darstellen. Sie werden gebeten, für 3 Kategorien der Läufer zu antworten: Richtung des Läufers, Stimmung des Läufers und Geschwindigkeit des Läufers. Die Läufer werden in Gruppen präsentiert. Bevor jede Gruppe beginnt, zeigt der Bildschirm an, auf welche Eigenschaft des Läufers Sie achten sollten.
+
+Dann reagieren Sie für die nächsten kurzen Videos so schnell wie möglich, indem Sie die richtigen Tastaturtasten drücken, bis Sie angewiesen werden, auf eine andere Eigenschaft zu achten.","<div style=""font-size: 24px; text-align: center; color: white;""> <h1>Biologische Bewegung Aufgabe</h1> <p>In dieser Aufgabe werden Ihnen sich bewegende Punkte präsentiert, die gehende Personen darstellen. Sie werden gebeten, für 3 Kategorien der Läufer zu antworten: Richtung des Läufers, Stimmung des Läufers und Geschwindigkeit des Läufers. Die Läufer werden in Gruppen präsentiert. Bevor jede Gruppe beginnt, zeigt der Bildschirm an, auf welche Eigenschaft des Läufers Sie achten sollten.</p> <p>Dann reagieren Sie für die nächsten kurzen Videos so schnell wie möglich, indem Sie die richtigen Tastaturtasten drücken, bis Sie angewiesen werden, auf eine andere Eigenschaft zu achten.</p> </div>
+
+","生物运动任务
+在本任务中，您将看到代表行走者的移动点。您需要为行走者的三个类别做出反应：行走者的方向、行走者的情绪和行走者的速度。行走者将分组呈现。在每组开始前，屏幕会告诉您应关注行走者的哪个特征。
+
+然后，在接下来的几个短片中，尽快通过按下正确的键盘按键来做出反应，直到指示您关注另一个特征。","<div style=""font-size: 24px; text-align: center; color: white;""> <h1>生物运动任务</h1> <p>在本任务中，您将看到代表行走者的移动点。您需要为行走者的三个类别做出反应：行走者的方向、行走者的情绪和行走者的速度。行走者将分组呈现。在每组开始前，屏幕会告诉您应关注行走者的哪个特征。</p> <p>然后，在接下来的几个短片中，尽快通过按下正确的键盘按键来做出反应，直到指示您关注另一个特征。</p> </div>
+",,"<div style=""font-size: 24px; text-align: center; color: white;""> <h1>Biologische Bewegungsaufgabe</h1> <p>Sie werden Punktlicht-Läufer sehen, die sich in verschiedene Richtungen bewegen.</p> <p><strong>ZUERST:</strong> Drücken Sie <strong>F</strong>, wenn sich der Läufer nach <strong>LINKS</strong> bewegt.</p> <p>Drücken Sie <strong>J</strong>, wenn sich der Läufer nach <strong>RECHTS</strong> bewegt.</p> <p><strong>DANN:</strong> Geben Sie die Emotion des Läufers an:</p> <p>Drücken Sie <strong>1</strong> für <strong>TRAURIG</strong></p> <p>Drücken Sie <strong>2</strong> für <strong>NEUTRAL</strong></p> <p>Drücken Sie <strong>3</strong> für <strong>GLÜCKLICH</strong></p> <p>Drücken Sie die <strong>LEERTASTE</strong>, um zu beginnen.</p> </div>",,,,,,
+biological_motion_introduction_page_2_long,"Biological Motion Task - Examples
+MOOD
+Please judge the MOOD of the walker.
+Is he happy, neutral or sad?
+HAPPY (1) | NEUTRAL (2) | SAD (3)
+[Example GIF: Happy Walker]
+Happy
+[Example GIF: Neutral Walker]
+Neutral
+[Example GIF: Sad Walker]
+Sad
+DIRECTION
+Please judge the DIRECTION of the walker.
+Which direction is the walker going?
+LEFT (1) | RIGHT (3)
+[Example GIF: Left Walker]
+Left
+[Example GIF: Right Walker]
+Right
+SPEED
+Please judge the SPEED of the walker.
+How fast is the walker going?
+SLOW (1) | FAST (3)
+[Example GIF: Slow Walker]
+Slow
+[Example GIF: Fast Walker]
+Fast","<div style=""color: white; width: 100%; padding: 20px; box-sizing: border-box;"">
+<h1 style=""text-align: center; font-size: 32px; margin-bottom: 30px;"">Biological Motion Task - Examples</h1>
+
+<div style=""display: flex; width: 100%; gap: 20px;"">
+
+<!-- MOOD -->
+<div style=""flex: 1.5; border: 2px solid white; padding: 15px;"">
+<h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">MOOD</h3>
+<p style=""text-align: center; margin-bottom: 10px;"">Please judge the MOOD of the walker.<br>Is he happy, neutral or sad?</p>
+<p style=""text-align: center; margin-bottom: 15px;"">HAPPY (1) | NEUTRAL (2) | SAD (3)</p>
+<div style=""display: flex;"">
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_happy_slow_unscrambled.gif"" style=""width: 90%;""><div>Happy</div></div>
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 90%;""><div>Neutral</div></div>
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_sad_slow_unscrambled.gif"" style=""width: 90%;""><div>Sad</div></div>
+</div>
+</div>
+
+<!-- DIRECTION -->
+<div style=""flex: 1; border: 2px solid white; padding: 15px;"">
+<h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">DIRECTION</h3>
+<p style=""text-align: center; margin-bottom: 10px;"">Please judge the DIRECTION of the walker.<br>Which direction is the walker going?</p>
+<p style=""text-align: center; margin-bottom: 15px;"">LEFT (1) | RIGHT (3)</p>
+<div style=""display: flex;"">
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>Left</div></div>
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_right_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>Right</div></div>
+</div>
+</div>
+
+<!-- SPEED -->
+<div style=""flex: 1; border: 2px solid white; padding: 15px;"">
+<h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">SPEED</h3>
+<p style=""text-align: center; margin-bottom: 10px;"">Please judge the SPEED of the walker.<br>How fast is the walker going?</p>
+<p style=""text-align: center; margin-bottom: 15px;"">SLOW (1) | FAST (3)</p>
+<div style=""display: flex;"">
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>Slow</div></div>
+<div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_fast_unscrambled.gif"" style=""width: 95%;""><div>Fast</div></div>
+</div>
+</div>
+
+</div>
+</div>","Biologische Bewegung Aufgabe - Beispiele
+
+STIMMUNG
+Bitte beurteilen Sie die STIMMUNG des Läufers.
+Ist er glücklich, neutral oder traurig?
+HAPPY (1) | NEUTRAL (2) | SAD (3)
+[Example GIF: Happy Walker]
+Glücklich
+[Example GIF: Neutral Walker]
+Neutral
+[Example GIF: Sad Walker]
+Traurig
+
+RICHTUNG
+Bitte beurteilen Sie die RICHTUNG des Läufers.
+In welche Richtung geht der Läufer?
+LEFT (1) | RIGHT (3)
+[Example GIF: Left Walker]
+Links
+[Example GIF: Right Walker]
+Rechts
+
+GESCHWINDIGKEIT
+Bitte beurteilen Sie die GESCHWINDIGKEIT des Läufers.
+Wie schnell geht der Läufer?
+SLOW (1) | FAST (3)
+[Example GIF: Slow Walker]
+Langsam
+[Example GIF: Fast Walker]
+Schnell","<div style=""color: white; width: 100%; padding: 20px; box-sizing: border-box;""> <h1 style=""text-align: center; font-size: 32px; margin-bottom: 30px;"">Biologische Bewegung Aufgabe - Beispiele</h1> <div style=""display: flex; width: 100%; gap: 20px;""> <!-- STIMMUNG --> <div style=""flex: 1.5; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">STIMMUNG</h3> <p style=""text-align: center; margin-bottom: 10px;"">Bitte beurteilen Sie die STIMMUNG des Läufers.<br>Ist er glücklich, neutral oder traurig?</p> <p style=""text-align: center; margin-bottom: 15px;"">HAPPY (1) | NEUTRAL (2) | SAD (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_happy_slow_unscrambled.gif"" style=""width: 90%;""><div>Glücklich</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 90%;""><div>Neutral</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_sad_slow_unscrambled.gif"" style=""width: 90%;""><div>Traurig</div></div> </div> </div> <!-- RICHTUNG --> <div style=""flex: 1; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">RICHTUNG</h3> <p style=""text-align: center; margin-bottom: 10px;"">Bitte beurteilen Sie die RICHTUNG des Läufers.<br>In welche Richtung geht der Läufer?</p> <p style=""text-align: center; margin-bottom: 15px;"">LEFT (1) | RIGHT (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>Links</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_right_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>Rechts</div></div> </div> </div> <!-- GESCHWINDIGKEIT --> <div style=""flex: 1; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">GESCHWINDIGKEIT</h3> <p style=""text-align: center; margin-bottom: 10px;"">Bitte beurteilen Sie die GESCHWINDIGKEIT des Läufers.<br>Wie schnell geht der Läufer?</p> <p style=""text-align: center; margin-bottom: 15px;"">SLOW (1) | FAST (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>Langsam</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_fast_unscrambled.gif"" style=""width: 95%;""><div>Schnell</div></div> </div> </div> </div> </div>
+
+","生物运动任务 - 示例
+
+情绪
+请判断行走者的情绪。
+他是快乐、中性还是悲伤？
+快乐 (1) | 中性 (2) | 悲伤 (3)
+[Example GIF: Happy Walker]
+快乐
+[Example GIF: Neutral Walker]
+中性
+[Example GIF: Sad Walker]
+悲伤
+
+方向
+请判断行走者的方向。
+行走者朝哪个方向走？
+左 (1) | 右 (3)
+[Example GIF: Left Walker]
+左
+[Example GIF: Right Walker]
+右
+
+速度
+请判断行走者的速度。
+行走者走得多快？
+慢 (1) | 快 (3)
+[Example GIF: Slow Walker]
+慢
+[Example GIF: Fast Walker]
+快","<div style=""color: white; width: 100%; padding: 20px; box-sizing: border-box;""> <h1 style=""text-align: center; font-size: 32px; margin-bottom: 30px;"">生物运动任务 - 示例</h1> <div style=""display: flex; width: 100%; gap: 20px;""> <!-- 情绪 --> <div style=""flex: 1.5; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">情绪</h3> <p style=""text-align: center; margin-bottom: 10px;"">请判断行走者的情绪。<br>他是快乐、中性还是悲伤？</p> <p style=""text-align: center; margin-bottom: 15px;"">快乐 (1) | 中性 (2) | 悲伤 (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_happy_slow_unscrambled.gif"" style=""width: 90%;""><div>快乐</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 90%;""><div>中性</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_sad_slow_unscrambled.gif"" style=""width: 90%;""><div>悲伤</div></div> </div> </div> <!-- 方向 --> <div style=""flex: 1; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">方向</h3> <p style=""text-align: center; margin-bottom: 10px;"">请判断行走者的方向。<br>行走者朝哪个方向走？</p> <p style=""text-align: center; margin-bottom: 15px;"">左 (1) | 右 (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>左</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_right_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>右</div></div> </div> </div> <!-- 速度 --> <div style=""flex: 1; border: 2px solid white; padding: 15px;""> <h3 style=""text-align: center; font-size: 26px; margin-bottom: 10px;"">速度</h3> <p style=""text-align: center; margin-bottom: 10px;"">请判断行走者的速度。<br>行走者走得多快？</p> <p style=""text-align: center; margin-bottom: 15px;"">慢 (1) | 快 (3)</p> <div style=""display: flex;""> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 95%;""><div>慢</div></div> <div style=""flex: 1; text-align: center;""><img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_fast_unscrambled.gif"" style=""width: 95%;""><div>快</div></div> </div> </div> </div> </div>
+",,,,,,,,
+biological_motion_introduction_page_3_long,"Scrambled Walkers
+
+Some of the walkers will be obscured, for example, below are scrambled happy, neutral, and sad walkers.
+
+It is difficult to spot the difference.
+
+Please still do your best in responding fast to the stimuli during the experiment.
+
+Normal Walker
+[]
+
+Scrambled Walker
+[]","<div style=""font-size: 20px; color: white; width: 100%; padding: 10px;"">
+  <h1 style=""text-align: center; margin-bottom: 20px; font-size: 30px;"">Scrambled Walkers</h1>
+  
+  <div style=""text-align: center; margin: 20px 0; font-size: 22px; line-height: 1.3;"">
+    Some of the walkers will be obscured, for example, below are scrambled happy, neutral, and sad walkers.
+  </div>
+  
+  <div style=""text-align: center; margin: 15px 0; font-size: 22px; color: #FFC107;"">
+    It is difficult to spot the difference.
+  </div>
+  
+  <div style=""text-align: center; margin: 20px 0; font-size: 22px;"">
+    Please still do your best in responding fast to the stimuli during the experiment.
+  </div>
+  
+  <!-- Comparison: Normal vs Scrambled - ONLY ONE EXAMPLE -->
+  <div style=""display: flex; justify-content: center; align-items: center; gap: 50px; margin: 40px 0;"">
+    <div style=""text-align: center;"">
+      <div style=""font-size: 22px; margin-bottom: 15px; color: white;"">Normal Walker</div>
+      <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 250px; height: auto; border: 2px solid white; border-radius: 5px;"">
+    </div>
+    
+    <div style=""text-align: center;"">
+      <div style=""font-size: 22px; margin-bottom: 15px; color: white;"">Scrambled Walker</div>
+      <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_scrambled.gif"" style=""width: 250px; height: auto; border: 2px solid white; border-radius: 5px;"">
+    </div>
+  </div>
+</div>","Maskierte Läufer
+
+Einige der Läufer werden mit einer Maske von sich bewegenden Punkten verschleiert, zum Beispiel unten sind maskierte glückliche, neutrale und traurige Läufer.
+
+Es ist schwierig, den Unterschied zu erkennen.
+
+Bitte geben Sie trotzdem Ihr Bestes, um während des Experiments schnell auf die Reize zu reagieren.
+
+Normaler Läufer
+[Example GIF: Normal Walker]
+
+Maskierter Läufer
+[Example GIF: Scrambled Walker]","<div style=""font-size: 20px; color: white; width: 100%; padding: 10px;""> <h1 style=""text-align: center; margin-bottom: 20px; font-size: 30px;"">Verschlüsselte Läufer</h1> <div style=""text-align: center; margin: 20px 0; font-size: 22px; line-height: 1.3;""> Einige der Läufer werden mit einer Maske von sich bewegenden Punkten verschleiert, zum Beispiel unten sind maskierte glückliche, neutrale und traurige Läufer.. </div> <div style=""text-align: center; margin: 15px 0; font-size: 22px; color: #FFC107;""> Es ist schwierig, den Unterschied zu erkennen. </div> <div style=""text-align: center; margin: 20px 0; font-size: 22px;""> Bitte geben Sie trotzdem Ihr Bestes, um während des Experiments schnell auf die Reize zu reagieren. </div> <!-- Comparison: Normal vs Scrambled - ONLY ONE EXAMPLE --> <div style=""display: flex; justify-content: center; align-items: center; gap: 50px; margin: 40px 0;""> <div style=""text-align: center;""> <div style=""font-size: 22px; margin-bottom: 15px; color: white;"">Normaler Läufer</div> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 250px; height: auto; border: 2px solid white; border-radius: 5px;""> </div> <div style=""text-align: center;""> <div style=""font-size: 22px; margin-bottom: 15px; color: white;"">Verdeckter Läufer</div> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_scrambled.gif"" style=""width: 250px; height: auto; border: 2px solid white; border-radius: 5px;""> </div> </div> </div>
+
+","乱序行走者
+
+一些行走者会被遮挡，例如下面是乱序的快乐、中性和悲伤行走者。
+
+很难发现差异。
+
+请仍然尽力在实验期间快速对刺激做出反应。
+
+正常行走者
+[Example GIF: Normal Walker]
+
+乱序行走者
+[Example GIF: Scrambled Walker]","<div style=""font-size: 20px; color: white; width: 100%; padding: 10px;""> <h1 style=""text-align: center; margin-bottom: 20px; font-size: 30px;"">乱序行走者</h1> <div style=""text-align: center; margin: 20px 0; font-size: 22px; line-height: 1.3;""> 一些行走者会被遮挡，例如下面是乱序的快乐、中性和悲伤行走者。 </div> <div style=""text-align: center; margin: 15px 0; font-size: 22px; color: #FFC107;""> 很难发现差异。 </div> <div style=""text-align: center; margin: 20px 0; font-size: 22px;""> 请仍然尽力在实验期间快速对刺激做出反应。 </div> <!-- Comparison: Normal vs Scrambled - ONLY ONE EXAMPLE --> <div style=""display: flex; justify-content: center; align-items: center; gap: 50px; margin: 40px 0;""> <div style=""text-align: center;""> <div style=""font-size: 22px; margin-bottom: 15px; color: white;"">正常行走者</div> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_unscrambled.gif"" style=""width: 250px; height: auto; border: 2px solid white; border-radius: 5px;""> </div> <div style=""text-align: center;""> <div style=""font-size: 22px; margin-bottom: 15px; color: white;"">乱序行走者</div> <img src=""experiments/EXPERIMENT_BIOLOGICAL_MOTION/point_light_walkers/PLW_left_neutral_slow_scrambled.gif"" style=""width: 250px; height: auto; border: 2px solid white; border-radius: 5px;""> </div> </div> </div>
+",,,,,,,,
+biological_motion_training_instructions,"Training Session
+
+You will now complete a short training session to get familiar with the task.
+
+You will see three walkers side by side.
+The walker in the middle is the one you need to judge.
+Compare it to the walkers on the sides to help your decision.
+
+Press 1 for the left option
+Press 3 for the right option
+
+You will receive immediate feedback after each trial.","<div style=""text-align: center; padding: 40px; max-width: 800px; margin: 0 auto;""> <h1>Training Session</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 30px 0;""> You will now complete a short training session to get familiar with the task. </p> <p style=""font-size: 20px; line-height: 1.5; margin: 20px 0; color: #aaa;""> You will see three walkers side by side.<br> The walker in the middle is the one you need to judge.<br> Compare it to the walkers on the sides to help your decision. </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> Press 1 for the left option<br> Press 3 for the right option </p> <p style=""font-size: 20px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> You will receive immediate feedback after each trial. </p> <div style=""margin-top: 50px; padding-top: 30px; border-top: 2px solid #555;""> <button id=""start-training-btn"" style="" font-size: 24px; padding: 15px 50px; background-color: #2196F3; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> START TRAINING </button> </div> </div>","Trainingssession
+
+Sie werden jetzt eine kurze Trainingssession absolvieren, um sich mit der Aufgabe vertraut zu machen.
+
+Sie sehen drei Läufer nebeneinander. Der Läufer in der Mitte ist derjenige, den Sie beurteilen müssen. Vergleichen Sie ihn mit den Läufern an den Seiten, um Ihre Entscheidung zu treffen.
+
+Drücken Sie 1 für die linke Option
+Drücken Sie 3 für die rechte Option
+
+Sie erhalten nach jedem Durchgang sofortiges Feedback.","<div style=""text-align: center; padding: 40px; max-width: 800px; margin: 0 auto;""> <h1>Trainingssession</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 30px 0;""> Sie werden jetzt eine kurze Trainingssession absolvieren, um sich mit der Aufgabe vertraut zu machen. </p> <p style=""font-size: 20px; line-height: 1.5; margin: 20px 0; color: #aaa;""> Sie sehen drei Läufer nebeneinander.<br> Der Läufer in der Mitte ist derjenige, den Sie beurteilen müssen.<br> Vergleichen Sie ihn mit den Läufern an den Seiten, um Ihre Entscheidung zu treffen. </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> Drücken Sie 1 für die linke Option<br> Drücken Sie 3 für die rechte Option </p> <p style=""font-size: 20px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> Sie erhalten nach jedem Durchgang sofortiges Feedback. </p> <div style=""margin-top: 50px; padding-top: 30px; border-top: 2px solid #555;""> <button id=""start-training-btn"" style="" font-size: 24px; padding: 15px 50px; background-color: #2196F3; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> TRAINING STARTEN </button> </div> </div>
+
+","训练阶段
+
+您现在将完成一个简短的训练阶段以熟悉任务。
+
+您将看到三个并排的行走者。中间的行走者是您需要判断的那个。将其与两侧的行走者进行比较以帮助您做出决定。
+
+按1选择左侧选项
+按3选择右侧选项
+
+每个试验后您将立即获得反馈。","<div style=""text-align: center; padding: 40px; max-width: 800px; margin: 0 auto;""> <h1>训练阶段</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 30px 0;""> 您现在将完成一个简短的训练阶段以熟悉任务。 </p> <p style=""font-size: 20px; line-height: 1.5; margin: 20px 0; color: #aaa;""> 您将看到三个并排的行走者。<br> 中间的行走者是您需要判断的那个。<br> 将其与两侧的行走者进行比较以帮助您做出决定。 </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> 按1选择左侧选项<br> 按3选择右侧选项 </p> <p style=""font-size: 20px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> 每个试验后您将立即获得反馈。 </p> <div style=""margin-top: 50px; padding-top: 30px; border-top: 2px solid #555;""> <button id=""start-training-btn"" style="" font-size: 24px; padding: 15px 50px; background-color: #2196F3; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> 开始训练 </button> </div> </div>
+",,,,,,,,
+biological_motion_training_trial_direction,Which direction is the middle walker moving?,Which direction is the middle walker moving?,In welche Richtung bewegt sich der mittlere Läufer?,In welche Richtung bewegt sich der mittlere Läufer?,中间的行走者在朝哪个方向移动,中间的行走者在往哪个方向移动？,,,,,,,,
+biological_motion_training_trial_speed,Which speed is the middle walker?,Which speed is the middle walker?,Welche Geschwindigkeit hat der mittlere Läufer?,Welche Geschwindigkeit hat der mittlere Läufer?,中间的行走者速度如何？,中间的行走者速度如何？,,,,,,,,
+biological_motion_training_trial_mood,Which emotion is the middle walker showing?,Which emotion is the middle walker showing?,Welche Emotion zeigt der mittlere Läufer?,Welche Emotion zeigt der mittlere Läufer?,中间的行走者表现出什么情绪？,中间的行走者表现出什么情绪？,,,,,,,,
+biological_motion_training_trial_instructions,"Press 1 for left option, 3 for right option","Press 1 for left option, 3 for right option","Drücken Sie 1 für linke Option, 3 für rechte Option","Drücken Sie 1 für linke Option, 3 für rechte Option",按1选择左侧选项，按3选择右侧选项,按1选择左侧选项，按3选择右侧选项,,,,,,,,
+biological_motion_feedback_correct,CORRECT!,CORRECT!,RICHTIG!,RICHTIG!,正确！,正确！,,,,,,,,
+biological_motion_feedback_incorrect,INCORRECT,INCORRECT,FALSCH!,FALSCH!,错误！,错误！,,,,,,,,
+biological_motion_feedback_walker,The middle walker was:,The middle walker was:,Der mittlere Läufer war:,Der mittlere Läufer war:,中间的行走者是：,中间的行走者是：,,,,,,,,
+biological_motion_feedback_selection,You selected:,You selected:,Sie haben ausgewählt:,Sie haben ausgewählt:,您选择了：,您选择了：,,,,,,,,
+biological_motion_feedback_next_trial_in,Next trial in 1.5 seconds...,Next trial in 1.5 seconds...,"Nächster Versuch in 1,5 Sekunden...","Nächster Versuch in 1,5 Sekunden...",下一个试验将在1.5秒后开始...,下一个试验将在1.5秒后开始...,,,,,,,,
+biological_motion_training_complete,"Training Complete!
+Great job! You have completed the training session.
+In the main experiment, you will now see only one single walker per trial and you will have to decide the speed or mood of this one walker. There will now be no direct comparison like in the training trial.
+Important reminder for the main experiment:
+• For emotion judgments, you will have TWO options (1=Neutral, 3=Sad)
+• For speed judgments, you will have TWO options (1=Slow, 3=Fast)
+• Each block will ask about only ONE feature (emotion OR speed)
+• Pay attention to the instruction at the start of each block
+• Respond as quickly and accurately as possible
+The main experiment will now begin.","<div style=""text-align: center; padding: 60px; max-width: 800px; margin: 0 auto;"">
+  <h1>Training Complete!</h1>
+  <p style=""font-size: 24px; line-height: 1.5; margin: 40px 0;"">
+    Great job! You have completed the training session. 
+  </p>
+  <p> In the main experiment, you will now see only one single walker per trial and you will have to decide the speed or mood of this one walker. There will now be no direct comparison like in the training trial 
+  </p>
+  <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;"">
+    Important reminder for the main experiment:
+  </p>
+  <ul style=""font-size: 20px; text-align: left; display: inline-block; margin: 30px auto; color: #aaa;"">
+    <li style=""margin: 15px 0;"">For emotion judgments, you will have TWO options (1=Neutral, 3=Sad)</li>
+    <li style=""margin: 15px 0;"">For speed judgments, you will have TWO options (1=Slow, 3=Fast)</li>
+    <li style=""margin: 15px 0;"">Each block will ask about only ONE feature (emotion OR speed)</li>
+    <li style=""margin: 15px 0;"">Pay attention to the instruction at the start of each block</li>
+    <li style=""margin: 15px 0;"">Respond as quickly and accurately as possible</li>
+  </ul>
+  <p style=""font-size: 22px; line-height: 1.5; margin: 40px 0; color: #FFC107;"">
+    The main experiment will now begin.
+  </p>
+  <div style=""margin-top: 50px;"">
+    <button id=""start-main-btn"" style=""
+      font-size: 24px;
+      padding: 15px 60px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    "">
+      START MAIN EXPERIMENT
+    </button>
+  </div>
+</div>","Training abgeschlossen!
+Gute Arbeit! Sie haben die Trainingssession abgeschlossen. Im Hauptexperiment sehen Sie jetzt nur noch einen einzigen Läufer pro Durchgang und müssen die Geschwindigkeit oder Stimmung dieses einen Läufers beurteilen. Es gibt jetzt keinen direkten Vergleich wie im Training.
+
+Wichtige Erinnerung für das Hauptexperiment:
+• Für Emotionsbeurteilungen haben Sie ZWEI Optionen (1=Neutral, 3=Traurig)
+• Für Geschwindigkeitsbeurteilungen haben Sie ZWEI Optionen (1=Langsam, 3=Schnell)
+• Jeder Block fragt nach nur EINER Eigenschaft (Emotion ODER Geschwindigkeit)
+• Achten Sie auf die Anweisung zu Beginn jedes Blocks
+• Reagieren Sie so schnell und genau wie möglich
+
+Das Hauptexperiment beginnt jetzt.","<div style=""text-align: center; padding: 60px; max-width: 800px; margin: 0 auto;""> <h1>Training abgeschlossen!</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 40px 0;""> Gute Arbeit! Sie haben die Trainingssession abgeschlossen. </p> <p> Im Hauptexperiment sehen Sie jetzt nur noch einen einzigen Läufer pro Durchgang und müssen die Geschwindigkeit oder Stimmung dieses einen Läufers beurteilen. Es gibt jetzt keinen direkten Vergleich wie im Training. </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> Wichtige Erinnerung für das Hauptexperiment: </p> <ul style=""font-size: 20px; text-align: left; display: inline-block; margin: 30px auto; color: #aaa;""> <li style=""margin: 15px 0;"">Für Emotionsbeurteilungen haben Sie ZWEI Optionen (1=Neutral, 3=Traurig)</li> <li style=""margin: 15px 0;"">Für Geschwindigkeitsbeurteilungen haben Sie ZWEI Optionen (1=Langsam, 3=Schnell)</li> <li style=""margin: 15px 0;"">Jeder Block fragt nach nur EINER Eigenschaft (Emotion ODER Geschwindigkeit)</li> <li style=""margin: 15px 0;"">Achten Sie auf die Anweisung zu Beginn jedes Blocks</li> <li style=""margin: 15px 0;"">Reagieren Sie so schnell und genau wie möglich</li> </ul> <p style=""font-size: 22px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> Das Hauptexperiment beginnt jetzt. </p> <div style=""margin-top: 50px;""> <button id=""start-main-btn"" style="" font-size: 24px; padding: 15px 60px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> HAUPTEXPERIMENT STARTEN </button> </div> </div>
+
+","训练完成！
+做得好！您已经完成了训练阶段。在主实验中，您现在每个试验将只看到一个单独的行走者，并且需要判断这个行走者的速度或情绪。现在将不再有像训练中那样的直接比较。
+
+主实验的重要提醒：
+• 对于情绪判断，您有两个选项（1=中性，3=悲伤）
+• 对于速度判断，您有两个选项（1=慢，3=快）
+• 每个块只询问一个特征（情绪或速度）
+• 注意每个块开始时的指示
+• 尽可能快速准确地做出反应
+
+主实验现在开始。","<div style=""text-align: center; padding: 60px; max-width: 800px; margin: 0 auto;""> <h1>训练完成！</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 40px 0;""> 做得好！您已经完成了训练阶段。 </p> <p> 在主实验中，您现在每个试验将只看到一个单独的行走者，并且需要判断这个行走者的速度或情绪。现在将不再有像训练中那样的直接比较。 </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> 主实验的重要提醒： </p> <ul style=""font-size: 20px; text-align: left; display: inline-block; margin: 30px auto; color: #aaa;""> <li style=""margin: 15px 0;"">对于情绪判断，您有两个选项（1=中性，3=悲伤）</li> <li style=""margin: 15px 0;"">对于速度判断，您有两个选项（1=慢，3=快）</li> <li style=""margin: 15px 0;"">每个块只询问一个特征（情绪或速度）</li> <li style=""margin: 15px 0;"">注意每个块开始时的指示</li> <li style=""margin: 15px 0;"">尽可能快速准确地做出反应</li> </ul> <p style=""font-size: 22px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> 主实验现在开始。 </p> <div style=""margin-top: 50px;""> <button id=""start-main-btn"" style="" font-size: 24px; padding: 15px 60px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> 开始主实验 </button> </div> </div>
+",,,,,,,,
+biological_motion_training_complete_long,"Training Complete!
+Great job! You have completed the training session.
+Important reminder for the main experiment:
+• For emotion judgments, you will have THREE options (1=Happy, 2=Neutral, 3=Sad)
+• Each block will ask about only ONE feature (emotion, direction, or speed)
+• Pay attention to the instruction at the start of each block
+The main experiment will now begin.","<div style=""text-align: center; padding: 60px; max-width: 800px; margin: 0 auto;""> <h1>Training Complete!</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 40px 0;""> Great job! You have completed the training session. </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> Important reminder for the main experiment: </p> <ul style=""font-size: 20px; text-align: left; display: inline-block; margin: 30px auto; color: #aaa;""> <li style=""margin: 15px 0;"">For emotion judgments, you will have THREE options (1=Happy, 2=Neutral, 3=Sad)</li> <li style=""margin: 15px 0;"">Each block will ask about only ONE feature (emotion, direction, or speed)</li> <li style=""margin: 15px 0;"">Pay attention to the instruction at the start of each block</li> </ul> <p style=""font-size: 22px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> The main experiment will now begin. </p> <div style=""margin-top: 50px;""> <button id=""start-main-btn"" style="" font-size: 24px; padding: 15px 60px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> START MAIN EXPERIMENT </button> </div> </div>","Training abgeschlossen!
+Gute Arbeit! Sie haben die Trainingssession abgeschlossen.
+
+Wichtige Erinnerung für das Hauptexperiment:
+• Für Emotionsbeurteilungen haben Sie DREI Optionen (1=Glücklich, 2=Neutral, 3=Traurig)
+• Jeder Block fragt nach nur EINER Eigenschaft (Emotion, Richtung oder Geschwindigkeit)
+• Achten Sie auf die Anweisung zu Beginn jedes Blocks
+
+Das Hauptexperiment beginnt jetzt.","<div style=""text-align: center; padding: 60px; max-width: 800px; margin: 0 auto;""> <h1>Training abgeschlossen!</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 40px 0;""> Gut gemacht! Sie haben die Trainingssession abgeschlossen. </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> Wichtige Erinnerung für das Hauptexperiment: </p> <ul style=""font-size: 20px; text-align: left; display: inline-block; margin: 30px auto; color: #aaa;""> <li style=""margin: 15px 0;"">Für Emotionsbeurteilungen haben Sie DREI Optionen (1=Fröhlich, 2=Neutral, 3=Traurig)</li> <li style=""margin: 15px 0;"">Jeder Block fragt nach nur EINEM Merkmal (Emotion, Richtung oder Geschwindigkeit)</li> <li style=""margin: 15px 0;"">Achten Sie auf die Anweisung zu Beginn jedes Blocks</li> </ul> <p style=""font-size: 22px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> Das Hauptexperiment beginnt nun. </p> <div style=""margin-top: 50px;""> <button id=""start-main-btn"" style="" font-size: 24px; padding: 15px 60px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> HAUPTEXPERIMENT STARTEN </button> </div> </div>","训练完成！
+做得好！您已经完成了训练阶段。
+
+主实验的重要提醒：
+• 对于情绪判断，您有三个选项（1=快乐，2=中性，3=悲伤）
+• 每个块只询问一个特征（情绪、方向或速度）
+• 注意每个块开始时的指示
+
+主实验现在开始。","<div style=""text-align: center; padding: 60px; max-width: 800px; margin: 0 auto;""> <h1>训练完成！</h1> <p style=""font-size: 24px; line-height: 1.5; margin: 40px 0;""> 做得好！您已经完成了训练阶段。 </p> <p style=""font-size: 22px; line-height: 1.5; margin: 30px 0; color: #4CAF50;""> 主实验的重要提醒： </p> <ul style=""font-size: 20px; text-align: left; display: inline-block; margin: 30px auto; color: #aaa;""> <li style=""margin: 15px 0;"">对于情绪判断，您有三个选项（1=快乐，2=中性，3=悲伤）</li> <li style=""margin: 15px 0;"">每个块只询问一个特征（情绪、方向或速度）</li> <li style=""margin: 15px 0;"">注意每个块开始时的指示</li> </ul> <p style=""font-size: 22px; line-height: 1.5; margin: 40px 0; color: #FFC107;""> 主实验现在开始。 </p> <div style=""margin-top: 50px;""> <button id=""start-main-btn"" style="" font-size: 24px; padding: 15px 60px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; ""> 开始主实验 </button> </div> </div>
+
+",,,,,,,,
+block_instruction_mood,"Please judge the MOOD of the walker!
+Is he neutral or sad?
+
+If the mood of the walker was NEUTRAL press (2)
+If the walker was SAD press (3)
+
+Press SPACE to start this block","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;"">
+  <p style=""font-size: 28px; margin: 30px 0;"">Please judge the MOOD of the walker!</p>
+  <p style=""font-size: 22px; margin: 20px 0;"">Is he neutral or sad?</p>
+  <div style=""margin: 40px 0;"">
+    <div style=""font-size: 26px; color: #FFC107; margin: 15px;"">If the mood of the walker was NEUTRAL press <strong>(2)</strong></div>
+    <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">If the walker was SAD press <strong>(3)</strong></div>
+  </div>
+  <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Press SPACE to start this block</p>
+</div>","Bitte beurteilen Sie die STIMMUNG des Läufers!
+Ist er neutral oder traurig?
+
+Wenn die Stimmung des Läufers NEUTRAL war, drücken Sie (2)
+Wenn der Läufer TRAURIG war, drücken Sie (3)
+
+Drücken Sie LEERTASTE, um diesen Block zu starten","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">Bitte beurteilen Sie die STIMMUNG des Läufers!</p> <p style=""font-size: 22px; margin: 20px 0;"">Ist er neutral oder traurig?</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #FFC107; margin: 15px;"">Wenn die Stimmung des Läufers NEUTRAL war, drücken Sie <strong>(2)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">Wenn der Läufer TRAURIG war, drücken Sie <strong>(3)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Drücken Sie LEERTASTE, um diesen Block zu starten</p> </div>
+","请判断行走者的情绪！
+他是中性还是悲伤？
+
+如果行走者的情绪是中性，请按 (2)
+如果行走者是悲伤，请按 (3)
+
+按空格键开始此块","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">请判断行走者的情绪！</p> <p style=""font-size: 22px; margin: 20px 0;"">他是中性还是悲伤？</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #FFC107; margin: 15px;"">如果行走者的情绪是中性，请按 <strong>(2)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">如果行走者是悲伤，请按 <strong>(3)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">按空格键开始此块</p> </div>
+
+",,,,,,,,
+block_instruction_mood_long,"
+Please judge the MOOD of the walker!
+Is he happy, neutral or sad?
+
+If the walker was HAPPY press (1)
+If the mood of the walker was NEUTRAL press (2)
+If the walker was SAD press (3)
+
+Press SPACE to start this block","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;"">
+  <p style=""font-size: 28px; margin: 30px 0;"">Please judge the MOOD of the walker!</p>
+  <p style=""font-size: 22px; margin: 20px 0;"">Is he happy, neutral or sad?</p>
+  <div style=""margin: 40px 0;"">
+    <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">If the walker was HAPPY press <strong>(1)</strong></div>
+    <div style=""font-size: 26px; color: #FFC107; margin: 15px;"">If the mood of the walker was NEUTRAL press <strong>(2)</strong></div>
+    <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">If the walker was SAD press <strong>(3)</strong></div>
+  </div>
+  <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Press SPACE to start this block</p>
+</div>","Bitte beurteilen Sie die STIMMUNG des Läufers!
+Ist er glücklich, neutral oder traurig?
+
+Wenn der Läufer GLÜCKLICH war, drücken Sie (1)
+Wenn die Stimmung des Läufers NEUTRAL war, drücken Sie (2)
+Wenn der Läufer TRAURIG war, drücken Sie (3)
+
+Drücken Sie LEERTASTE, um diesen Block zu starten","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">Bitte beurteilen Sie die STIMMUNG des Läufers!</p> <p style=""font-size: 22px; margin: 20px 0;"">Ist er glücklich, neutral oder traurig?</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">Wenn der Läufer GLÜCKLICH war, drücken Sie <strong>(1)</strong></div> <div style=""font-size: 26px; color: #FFC107; margin: 15px;"">Wenn die Stimmung des Läufers NEUTRAL war, drücken Sie <strong>(2)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">Wenn der Läufer TRAURIG war, drücken Sie <strong>(3)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Drücken Sie LEERTASTE, um diesen Block zu starten</p> </div>
+","请判断行走者的情绪！
+他是快乐、中性还是悲伤？
+
+如果行走者是快乐，请按 (1)
+如果行走者的情绪是中性，请按 (2)
+如果行走者是悲伤，请按 (3)
+
+按空格键开始此块","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">请判断行走者的情绪！</p> <p style=""font-size: 22px; margin: 20px 0;"">他是快乐、中性还是悲伤？</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">如果行走者是快乐，请按 <strong>(1)</strong></div> <div style=""font-size: 26px; color: #FFC107; margin: 15px;"">如果行走者的情绪是中性，请按 <strong>(2)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">如果行走者是悲伤，请按 <strong>(3)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">按空格键开始此块</p> </div>
+
+",,"<div style=""font-size: 24px; text-align: center; color: white; padding: 50px;""> <h2>Wie war die Emotion des Läufers?</h2> <p>Drücken Sie <strong>1</strong> für <strong style=""color: #3498db;"">TRAURIG</strong></p> <p>Drücken Sie <strong>2</strong> für <strong style=""color: #95a5a6;"">NEUTRAL</strong></p> <p>Drücken Sie <strong>3</strong> für <strong style=""color: #e74c3c;"">GLÜCKLICH</strong></p> </div>",,,,,,
+block_instruction_direction,"Please judge the DIRECTION of the walker!
+Which direction is the walker going?
+
+If he is walking LEFT press (1)
+If he is walking RIGHT press (2)
+
+Press SPACE to start this block","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;"">
+  <p style=""font-size: 28px; margin: 30px 0;"">Please judge the DIRECTION of the walker!</p>
+  <p style=""font-size: 22px; margin: 20px 0;"">Which direction is the walker going?</p>
+  <div style=""margin: 40px 0;"">
+    <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">If he is walking LEFT press <strong>(1)</strong></div>
+    <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">If he is walking RIGHT press <strong>(2)</strong></div>
+  </div>
+  <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Press SPACE to start this block</p>
+</div>","Bitte beurteilen Sie die RICHTUNG des Läufers!
+In welche Richtung geht der Läufer?
+
+Wenn er nach LINKS geht, drücken Sie (1)
+Wenn er nach RECHTS geht, drücken Sie (2)
+
+Drücken Sie LEERTASTE, um diesen Block zu starten","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">Bitte beurteilen Sie die RICHTUNG des Läufers!</p> <p style=""font-size: 22px; margin: 20px 0;"">In welche Richtung geht der Läufer?</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">Wenn er nach LINKS geht, drücken Sie <strong>(1)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">Wenn er nach RECHTS geht, drücken Sie <strong>(2)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Drücken Sie LEERTASTE, um diesen Block zu starten</p> </div>
+
+","请判断行走者的方向！
+行走者朝哪个方向走？
+
+如果他朝左走，请按 (1)
+如果他朝右走，请按 (2)
+
+按空格键开始此块","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">请判断行走者的方向！</p> <p style=""font-size: 22px; margin: 20px 0;"">行走者朝哪个方向走？</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">如果他朝左走，请按 <strong>(1)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">如果他朝右走，请按 <strong>(2)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">按空格键开始此块</p> </div>
+",,,,,,,,
+block_instruction_speed,"Please judge the SPEED of the walker!
+How fast is the walker going?
+
+If he is walking SLOW press (1)
+If he is walking FAST press (3)
+
+Press SPACE to start this block","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;"">
+  <p style=""font-size: 28px; margin: 30px 0;"">Please judge the SPEED of the walker!</p>
+  <p style=""font-size: 22px; margin: 20px 0;"">How fast is the walker going?</p>
+  <div style=""margin: 40px 0;"">
+    <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">If he is walking SLOW press <strong>(1)</strong></div>
+    <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">If he is walking FAST press <strong>(3)</strong></div>
+  </div>
+  <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Press SPACE to start this block</p>
+</div>","Bitte beurteilen Sie die GESCHWINDIGKEIT des Läufers!
+Wie schnell geht der Läufer?
+
+Wenn er LANGSAM geht, drücken Sie (1)
+Wenn er SCHNELL geht, drücken Sie (3)
+
+Drücken Sie LEERTASTE, um diesen Block zu starten","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">Bitte beurteilen Sie die GESCHWINDIGKEIT des Läufers!</p> <p style=""font-size: 22px; margin: 20px 0;"">Wie schnell geht der Läufer?</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">Wenn er LANGSAM geht, drücken Sie <strong>(1)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">Wenn er SCHNELL geht, drücken Sie <strong>(3)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">Drücken Sie LEERTASTE, um diesen Block zu starten</p> </div>
+
+","请判断行走者的速度！
+行走者走得多快？
+
+如果他走得慢，请按 (1)
+如果他走得快，请按 (3)
+
+按空格键开始此块","<div style=""text-align: center; color: white; font-size: 24px; padding: 40px;""> <p style=""font-size: 28px; margin: 30px 0;"">请判断行走者的速度！</p> <p style=""font-size: 22px; margin: 20px 0;"">行走者走得多快？</p> <div style=""margin: 40px 0;""> <div style=""font-size: 26px; color: #4CAF50; margin: 15px;"">如果他走得慢，请按 <strong>(1)</strong></div> <div style=""font-size: 26px; color: #FF5252; margin: 15px;"">如果他走得快，请按 <strong>(3)</strong></div> </div> <p style=""font-size: 20px; margin-top: 50px; color: #BBBBBB;"">按空格键开始此块</p> </div>",,,,,,,,
+biological_motion_complete,"Biological Motion Task Complete!
+Your responses have been saved.
+Click the button below to continue to the next task.
+Continue","` <div style=""text-align: center; padding: 100px; color: white;""> <h2>Biological Motion Task Complete!</h2> <p>Your responses have been saved.</p> <p>Click the button below to continue to the next task.</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> Continue </button> </div> `","Biologische Bewegung Aufgabe abgeschlossen!
+Ihre Antworten wurden gespeichert.
+Klicken Sie auf die Schaltfläche unten, um mit der nächsten Aufgabe fortzufahren.
+Weiter","<div style=""text-align: center; padding: 100px; color: white;""> <h2>Biologische Bewegung Aufgabe abgeschlossen!</h2> <p>Ihre Antworten wurden gespeichert.</p> <p>Klicken Sie auf die Schaltfläche unten, um mit der nächsten Aufgabe fortzufahren.</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> Weiter </button> </div>
+
+","生物运动任务完成！
+您的回答已保存。
+点击下方按钮继续下一个任务。
+继续","<div style=""text-align: center; padding: 100px; color: white;""> <h2>生物运动任务完成！</h2> <p>您的回答已保存。</p> <p>点击下方按钮继续下一个任务。</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> 继续 </button> </div>
+",,"<div style=""text-align: center; padding: 100px; color: white;""> <h2>Biologische Bewegungsaufgabe abgeschlossen!</h2> <p>Ihre Antworten wurden gespeichert.</p> <p>Klicken Sie auf die Schaltfläche unten, um mit der nächsten Aufgabe fortzufahren.</p> <button id=""continue-btn"" style=""font-size: 20px; padding: 12px 40px; margin-top: 30px; background: #4CAF50; color: white; border: none; border-radius: 5px;""> Weiter </button> </div>",,,,,,
+biological_motion_direction_label_left,LEFT,LEFT,LINKS,LINKS,左,左,,,,,,,,
+biological_motion_direction_label_right,RIGHT,RIGHT,RECHTS,RECHTS,右,右,,,,,,,,
+biological_motion_emotion_label_happy,HAPPY,HAPPY,FRÖHLICH,FRÖHLICH,开心,开心,,,,,,,,
+biological_motion_emotion_label_neutral,NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,中性,中性,,,,,,,,
+biological_motion_emotion_label_sad,SAD,SAD,TRAURIG,TRAURIG,悲伤,悲伤,,,,,,,,
+biological_motion_speed_label_slow,SLOW,SLOW,LANGSAM,LANGSAM,慢,慢,,,,,,,,
+biological_motion_speed_label_fast,Fast,Fast,Schnell,Schnell,快,快,,,,,,,,
+biological_motion_button_previous,Previous,Previous,Zurück,Zurück,上一页,上一页,,,,,,,,
+biological_motion_button_next,Next,Next,Weiter,Weiter,下一页,下一页,,,,,,,,
+biological_motion_start_experiment_button,START EXPERIMENT,START EXPERIMENT,EXPERIMENT STARTEN,EXPERIMENT STARTEN,开始实验,开始实验,,,,,,,,
+biological_motion_start_training_button,START TRAINING,START TRAINING,TRAINING STARTEN,TRAINING STARTEN,开始训练,开始训练,,,,,,,,
+biological_motion_training_trial_counter,Training Trial,Training Trial {current}/{total},Trainingsversuch {}/{},Trainingsversuch {current}/{total},培训试验 {current}/{total},培训试验 {current}/{total},,,,,,,,
+biological_motion_press_button,Press,Press,Drücken Sie,Drücken Sie,按,按,,,,,,,,
+mind_wandering_instructions,"Dear participant,
+
+While performing this task, we ask you to keep your eyes open and avoid prolonged structured thinking, such as counting or singing.
+Each time the ""+"" symbol is shown on the screen, simply rest with your eyes open.
+After the ""+"" disappears, you will see a few questions asking how you felt while the ""+"" was on the screen.
+When you feel ready, press the space bar to begin the task.","`Dear participant,<br><br> While performing this task, we ask you to keep your eyes open and avoid prolonged structured thinking, such as counting or singing.<br><br> Each time the ""+"" symbol is shown on the screen, simply rest with your eyes open.<br><br> After the ""+"" disappears, you will see a few questions asking how you felt while the ""+"" was on the screen.<br><br> When you feel ready, press the space bar to begin the task.`","Sehr geehrte Teilnehmerin, sehr geehrter Teilnehmer, Während Sie diese Aufgabe durchführen, bitten wir Sie, Ihre Augen offen zu halten und längeres strukturiertes Denken wie Zählen oder Singen zu vermeiden. Immer wenn das ""+""-Symbol auf dem Bildschirm erscheint, ruhen Sie sich einfach mit geöffneten Augen aus. Nachdem das ""+"" verschwunden ist, werden Sie einige Fragen sehen, die Sie nach Ihrem Empfinden während der ""+""-Phase fragen. Wenn Sie bereit sind, drücken Sie die Leertaste, um mit der Aufgabe zu beginnen.","Sehr geehrte Teilnehmerin, sehr geehrter Teilnehmer,<br><br> Während Sie diese Aufgabe durchführen, bitten wir Sie, Ihre Augen offen zu halten und längeres strukturiertes Denken wie Zählen oder Singen zu vermeiden.<br><br> Immer wenn das ""+""-Symbol auf dem Bildschirm erscheint, ruhen Sie sich einfach mit geöffneten Augen aus.<br><br> Nachdem das ""+"" verschwunden ist, werden Sie einige Fragen sehen, die Sie nach Ihrem Empfinden während der ""+""-Phase fragen.<br><br> Wenn Sie bereit sind, drücken Sie die Leertaste, um mit der Aufgabe zu beginnen.",亲爱的参与者： 在进行这项任务时，请您保持睁眼，避免长时间进行结构化思考，例如计数或唱歌。 每次屏幕上出现“+”符号时，请睁眼休息片刻。 “+”符号消失后，您会看到几个问题，询问您在“+”符号出现期间的感受。 准备好后，请按空格键开始任务。,亲爱的参与者：<br><br> 在进行这项任务时，请您保持睁眼，避免长时间进行结构化思考，例如计数或唱歌。<br><br> 每次屏幕上出现“+”符号时，请睁眼休息片刻。<br><br> “+”符号消失后，您会看到几个问题，询问您在“+”符号出现期间的感受。<br><br> 准备好后，请按空格键开始任务。,"Sehr geehrte Teilnehmerin, sehr geehrter Teilnehmer, Während Sie diese Aufgabe durchführen, bitten wir Sie, Ihre Augen offen zu halten und längeres strukturiertes Denken wie Zählen oder Singen zu vermeiden. Immer wenn das ""+""-Symbol auf dem Bildschirm erscheint, ruhen Sie sich einfach mit geöffneten Augen aus. Nachdem das ""+"" verschwunden ist, werden Sie einige Fragen sehen, die Sie nach Ihrem Empfinden während der ""+""-Phase fragen. Wenn Sie bereit sind, drücken Sie die Leertaste, um mit der Aufgabe zu beginnen.","Sehr geehrte Teilnehmerin, sehr geehrter Teilnehmer,<br><br> Während Sie diese Aufgabe durchführen, bitten wir Sie, Ihre Augen offen zu halten und längeres strukturiertes Denken wie Zählen oder Singen zu vermeiden.<br><br> Immer wenn das ""+""-Symbol auf dem Bildschirm erscheint, ruhen Sie sich einfach mit geöffneten Augen aus.<br><br> Nachdem das ""+"" verschwunden ist, werden Sie einige Fragen sehen, die Sie nach Ihrem Empfinden während der ""+""-Phase fragen.<br><br> Wenn Sie bereit sind, drücken Sie die Leertaste, um mit der Aufgabe zu beginnen.",,,,,,
+button_previous,Previous,"""Previous""",Zurück,"""Zurück""",以前的,以前的,Zurück,"""Zurück""",,,,,,
+button_next,Next,"""Next""",Weiter,"""Weiter""",下一个,下一个,Weiter,"""Weiter""",,,,,,
+mind_wandering_orientation_question,My thoughts were about          ,My thoughts were about          ,Meine Gedanken bezogen sich auf,Meine Gedanken bezogen sich auf,我当时在想……,我当时在想……,Meine Gedanken bezogen sich auf,Meine Gedanken bezogen sich auf,,,,,,
+mind_wandering_orientation_left,"Internal stimuli (e.g., inner speech, autobiographical memories)","Internal stimuli (e.g., inner speech, autobiographical memories)","Innere Reize (z.B. innerer Monolog, autobiografische Erinnerungen)","Innere Reize (z.B. innerer Monolog, autobiografische Erinnerungen)",内部刺激（例如，内心独白、自传体记忆）,内部刺激（例如，内心独白、自传体记忆）,"Innere Reize (z.B. innerer Monolog, autobiografische Erinnerungen)","Innere Reize (z.B. innerer Monolog, autobiografische Erinnerungen)",,,,,,
+mind_wandering_orientation_right,"External stimuli (e.g., auditory, visual, olfactory)","External stimuli (e.g., auditory, visual, olfactory)","Äußere Reize (z.B. akustische, visuelle, olfaktorische)","Äußere Reize (z.B. akustische, visuelle, olfaktorische)",外部刺激（例如，听觉、视觉、嗅觉）,外部刺激（例如，听觉、视觉、嗅觉）,"Äußere Reize (z.B. akustische, visuelle, olfaktorische)","Äußere Reize (z.B. akustische, visuelle, olfaktorische)",,,,,,
+mind_wandering_orientation_name,internal_external,internal_external,internal_external,internal_external,internal_external,internal_external,internal_external,internal_external,,,,,,
+mind_wandering_speed_question,My thoughts were,My thoughts were,Meine Gedanken waren,Meine Gedanken waren,我的思绪很,我的思绪很,Meine Gedanken waren,Meine Gedanken waren,,,,,,
+mind_wandering_speed_left,Calm,Calm,Ruhig,Ruhig,平静,平静,Ruhig,Ruhig,,,,,,
+mind_wandering_speed_right,Fast,Fast,Schnell,Schnell,快,快,Schnell,Schnell,,,,,,
+mind_wandering_speed_name,calm_fast,calm_fast,calm_fast,calm_fast,calm_fast,calm_fast,calm_fast,calm_fast,,,,,,
+mind_wandering_flow_question,My thoughts were flowing,My thoughts were flowing,Meine Gedanken flossen,Meine Gedanken flossen,我的思绪如泉涌般流淌,我的思绪如泉涌般流淌,Meine Gedanken flossen,Meine Gedanken flossen,,,,,,
+mind_wandering_flow_left,Evenly,Evenly,Gleichmäßig,Gleichmäßig,均匀地,均匀地,Gleichmäßig,Gleichmäßig,,,,,,
+mind_wandering_flow_right,Unevenly,Unevenly,Ungleichmäßig,Ungleichmäßig,不均匀地,不均匀地,Ungleichmäßig,Ungleichmäßig,,,,,,
+mind_wandering_flow_name,even_uneven,even_uneven,even_uneven,even_uneven,even_uneven,even_uneven,even_uneven,even_uneven,,,,,,
+mind_wandering_thanks,"Experiment Complete!
+Thank you for participating.
+Your data has been saved.
+You may close this window.","<div style=""font-size: 24px; text-align: center;""> <h1>Experiment Complete!</h1> <p>Thank you for participating.</p> <p>Your data has been saved.</p> <p style=""margin-top: 30px;"">You may close this window.</p> </div>",Experiment abgeschlossen! Vielen Dank für Ihre Teilnahme. Ihre Daten wurden gespeichert. Sie können dieses Fenster schließen.,"<div style=""font-size: 24px; text-align: center;""> <h1>Experiment abgeschlossen!</h1> <p>Vielen Dank für Ihre Teilnahme.</p> <p>Ihre Daten wurden gespeichert.</p> <p style=""margin-top: 30px;"">Sie können dieses Fenster schließen.</p> </div>","实验完成！
+感谢您的参与。
+您的数据已保存。
+您可以关闭此窗口。","<div style=""font-size: 24px; text-align: center;""> <h1>实验完成！</h1> <p>感谢您的参与。</p> <p>您的数据已保存。</p> <p style=""margin-top: 30px;"">您可以关闭此窗口。</p> </div>",Experiment abgeschlossen! Vielen Dank für Ihre Teilnahme. Ihre Daten wurden gespeichert. Sie können dieses Fenster schließen.,"<div style=""font-size: 24px; text-align: center;""> <h1>Experiment abgeschlossen!</h1> <p>Vielen Dank für Ihre Teilnahme.</p> <p>Ihre Daten wurden gespeichert.</p> <p style=""margin-top: 30px;"">Sie können dieses Fenster schließen.</p> </div>",,,,,,

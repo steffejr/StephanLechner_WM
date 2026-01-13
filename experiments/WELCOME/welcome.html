@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #start-button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #start-button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Original HTML (for reference):
+    <h1>Welcome to the Study!</h1>
+    <p>Thank you for participating. Please read the instructions carefully.</p>
+    <p>Please press F11 on your keyboard to enter fullscreen mode before continuing.</p>
+    <button id="start-button">Start Study</button>
+    -->
+    <div id="welcome-content"></div>
+
+    <script>
+        // Insert the translated HTML block based on the language
+        document.getElementById('welcome-content').innerHTML = jatos.studySessionData.translations.welcome_introduction;
+
+        // Extract subject ID from URL hash parameter
+        const hashParams = new URLSearchParams(window.location.hash.substring(1));
+        let subjectId = hashParams.get('record_id');
+
+        if (!subjectId) {
+            // Use the translated prompt
+            const promptText = jatos.studySessionData.translations.welcome_popup_id.replace(/subjectId = prompt\("(.*)"\);/, "$1");
+            subjectId = prompt(promptText);
+        }
+
+        // Check for Mobile Device
+        const isMobile = /Mobile|Tablet|iPad|iPhone|Android/.test(navigator.userAgent);
+        if (isMobile) {
+            document.body.innerHTML = jatos.studySessionData.translations.welcome_phone;
+            throw new Error("Mobile device detected. Experiment aborted.");
+        }
+
+        // Store in JATOS study session data for all experiments to use
+        if (subjectId) {
+            jatos.studySessionData.subjectId = subjectId;
+            jatos.studySessionData.sessionStartTime = new Date().toISOString();
+            jatos.setStudySessionData(jatos.studySessionData);
+            console.log("Subject ID stored in session:", subjectId);
+        } else {
+            console.error("No subject ID provided!");
+        }
+
+        // Handle Start Button Click
+        document.getElementById('start-button').addEventListener('click', function(event) {
+            const confirmText = jatos.studySessionData.translations.welcome_popup_F11.replace(/const isFullscreenConfirmed = confirm\("(.*)"\);/, "$1");
+            const isFullscreenConfirmed = confirm(confirmText);
+            if (!isFullscreenConfirmed) {
+                event.preventDefault();
+                const alertText = jatos.studySessionData.translations.welcome_popup_F11_reminder.replace(/alert\("(.*)"\);/, "$1");
+                alert(alertText);
+                return;
+            }
+            console.log("Welcome complete, calling continueToNext");
+            window.continueToNext();
+        });
+    </script>
+</body>
+</html>
