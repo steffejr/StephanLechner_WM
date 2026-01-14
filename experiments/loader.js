@@ -89,7 +89,7 @@ async function loadNextComponent() {
         await loadScript(json5Path);
         
         // load config as JSON5
-        const response = await fetch('sequence_config.json5');
+        const response = await fetch('STUDY_GERMANY/sequence_config.json5');
         const configText = await response.text();
         const config = JSON5.parse(configText);
         

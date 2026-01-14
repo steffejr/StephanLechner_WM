@@ -1,6 +1,7 @@
 {
   "sequence": [
     "/experiments/WELCOME/welcome.html",
+    "/experiments/EXPERIMENT_SpatialDMS/SpatialDMS.html",
     "/experiments/EXPERIMENT_BIOLOGICAL_MOTION/biological_motion.html",
     "/experiments/EXPERIMENT_FINGERTAPPING/fingertapping.html",
     "/experiments/EXPERIMENT_MIND_WANDERING/mind_wandering.html",
@@ -10,7 +11,7 @@
 
 
   // ------ LANGUAGE ----
-  "language": "de",   // en, de, zh
+  "language": "en",   // en, de, zh
   
 
   "parameters": {
