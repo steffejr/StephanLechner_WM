@@ -24,6 +24,7 @@
     <!--<div id="headerButtons"></div>
     <script src="jatos.js"></script>
     <script src="jspsych/dist/jspsych.js"></script>-->
+    <script src="jspsych_dist/jspsych.js"></script>
     <script src="jspsych_dist/plugin-fullscreen.js"></script>
     <script src="jspsych_dist/plugin-call-function.js"></script>
     <script src="jspsych_dist/plugin-survey-text.js"></script>
@@ -41,33 +42,9 @@
 
     <!--<script src="Batteries/ComponentList.js"></script>-->
     <script src="SpatialDMS_setup.js"></script>
-    <script> 
-      // used for the image used during the instructions
-        var BaseFolderName = 'assets/InstructionalImages/'
-    </script>
-        <script src="SpatialDMS_Instructions.js"></script>
-    <script>
-      var SpatialDMS_parameters = 'empty'
-      var parameters = 'empty'
-      jatos.onLoad(() => {
-        if (jatos.studySessionData.ComponentParameterLists[jatos.studySessionData.CurrentIndex]==='undefined')
-        {
-              parameters = 'SpatialDMS_Adaptive'
-              InstructionsToUse = 'Default'
-        }
-        else {
-              parameters = jatos.studySessionData.ComponentParameterLists[jatos.studySessionData.CurrentIndex] 
-              InstructionsToUse = jatos.studySessionData.InstructionList[jatos.studySessionData.CurrentIndex] 
-        }
-        pseudoSwitch(parameters)
-        console.log(parameters)
-        LANG = jatos.batchSession.get(jatos.workerId+"_Language")
-        console.log(LANG)
-        pseudoSwitch(LANG+'_Instructions_'+InstructionsToUse)
-        //load general label names
-        pseudoSwitch(LANG+'_LabelNames')
-      })
-    </script> 
+
+    <script src="SpatialDMS_Instructions.js"></script>
+    
     <script src="SpatialDMS_experiment.js"></script>
     <script src="DMS_Scoring.js"></script>
 <!--    <div id="jspsych-target"  style="overflow:auto; height:100%" class='center'></div>
@@ -115,6 +92,55 @@
     });
   </script>
 -->
+  <script>
+    
+    jatos.onLoad(function() {
+    var SPATIAL_DMS_PARAMS = {}
+    SPATIAL_DMS_PARAMS.jason = "JASON"
 
+    const subjectId = jatos.studySessionData.subjectId || 'unknown';
+    console.log("Subject ID:", subjectId);
+
+    var jsPsych = initJsPsych({
+        on_finish: function() {
+            saveData();
+            showThankYouScreen();
+        }
+    });
+
+    jsPsych.data.addProperties({
+        subject_id: subjectId
+    });
+    // load params from config file
+    // JSON5 parser
+    function parseJSON5(json5String) {
+        json5String = json5String.replace(/\/\/.*$/gm, '');
+        json5String = json5String.replace(/\/\*[\s\S]*?\*\//g, '');
+        json5String = json5String.replace(/,(\s*[}\]])/g, '$1');
+        return JSON.parse(json5String);
+    }
+
+    var SPATIAL_DMS_PARAMS = (() => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'STUDY_GERMANY/sequence_config.json5', false);
+        xhr.send();
+        const config = parseJSON5(xhr.responseText);
+        return config.parameters.spatial_dms;
+    })();
+
+
+    console.log("READING PARAMETERS")
+    console.log(SPATIAL_DMS_PARAMS)
+    console.log(SPATIAL_DMS_PARAMS.ShowWelcome)
+  
+      
+      var jsPsych = initJsPsych({
+          on_finish: function() {
+            saveData();
+            showThankYouScreen();
+        }
+      });
+  })
+</script>
   </body>
 </html>

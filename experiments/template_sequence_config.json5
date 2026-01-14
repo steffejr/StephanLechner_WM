@@ -25,12 +25,16 @@
     },
 
     
+    // ------ SPATIAL DMS ----
+    "spatial_dms": {
+      "jason": 5
+    },
 
     // ------ BIOLOGICAL MOTION ----
     "biological_motion": {
       // SHORT (MAIN) VERSION
       // TESTING
-      "trials_per_block": 5,             // <-
+      "trials_per_block": 509,             // <-
       "block_break_duration": 2000       // <-
       // ACTUAL EXPERIMENT
       // "trials_per_block": 90,        

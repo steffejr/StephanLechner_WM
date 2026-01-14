@@ -52,10 +52,10 @@
 
         // Check for Mobile Device
         const isMobile = /Mobile|Tablet|iPad|iPhone|Android/.test(navigator.userAgent);
-        if (isMobile) {
+        /*if (isMobile) {
             document.body.innerHTML = jatos.studySessionData.translations.welcome_phone;
-            //throw new Error("Mobile device detected. Experiment aborted.");
-        }
+            throw new Error("Mobile device detected. Experiment aborted.");
+        }*/
 
         // Store in JATOS study session data for all experiments to use
         if (subjectId) {

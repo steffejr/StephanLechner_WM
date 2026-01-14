@@ -14,6 +14,7 @@ const NumberLocations = GridCountX*GridCountY
 var CurrentLocations
 const CircleColor = 'black'
 console.log(window)
+
 if ( window.innerWidth < window.innerHeight )
   { 
      CanvasHeight = window.innerWidth
@@ -236,3 +237,4 @@ timeline.push(loop_node)
 timeline.push(Notes)
 timeline.push(ThankYou)
 timeline.push(SendData)
+

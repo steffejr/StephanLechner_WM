@@ -1,5 +1,6 @@
 
 var Results
+console.log("HELLO FROM COMMON PARTS")
 
 // ============== INITIAL MICROPHONE IF NEEDED ================
 
@@ -10,7 +11,7 @@ var Results
 var Welcome_progress_bar_timer_start = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.WelcomeSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.WelcomeSpoken > 0 ) {
         document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
         document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
         timer_progress_bar(WelcomeTime) }
@@ -20,7 +21,7 @@ var Welcome_progress_bar_timer_start = {
 var Welcome_progress_bar_timer_stop = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.WelcomeSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.WelcomeSpoken > 0 ) {
         clearInterval(interval);
         document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
          }
@@ -134,7 +135,7 @@ var WelcomeWritten = {
 // present the spoken and written welcome to the task
 var WelcomeSpoken = {
     type: jsPsychAudioButtonResponse,
-    stimulus: function() { return parameters.WelcomeAudio },
+    stimulus: function() { return SPATIAL_DMS_PARAMS.WelcomeAudio },
     choices: function() { return [LabelNames.Repeat] },
     prompt: function() { 
         console.log("HELLO FROM WELCOME")
@@ -158,7 +159,7 @@ var WelcomeSpoken_loop = {
 var if_WelcomeWritten = {
     timeline: [WelcomeWritten],
     conditional_function: function() {
-      if ( parameters.ShowWelcome  & !( parameters.WelcomeSpoken))
+      if ( SPATIAL_DMS_PARAMS.ShowWelcome  & !( SPATIAL_DMS_PARAMS.WelcomeSpoken))
       { return true }
       else { return false }
     }
@@ -171,7 +172,7 @@ var if_WelcomeWritten = {
         try {
             document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
         } catch (err) {}
-      if ( parameters.ShowWelcome & parameters.WelcomeSpoken)
+      if ( SPATIAL_DMS_PARAMS.ShowWelcome & SPATIAL_DMS_PARAMS.WelcomeSpoken)
       { return true }
       else { return false }
     }
@@ -199,7 +200,7 @@ var notes = {
 var if_Notes = {
     timeline: [notes],
     conditional_function: function() {
-        if ( parameters.AskForNotes )
+        if ( SPATIAL_DMS_PARAMS.AskForNotes )
         { return true }
         else { return false }
     }
@@ -225,7 +226,7 @@ var thank_you = {
 var if_thank_you = {
     timeline: [thank_you],
     conditional_function: function() {
-        if ( parameters.ShowThankYou )
+        if ( SPATIAL_DMS_PARAMS.ShowThankYou )
         { return true }
         else { return false }
     }
@@ -245,18 +246,18 @@ var countInstr04 = 0
 var Instructions01_progress_bar_timer_start = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
         console.log(LabelNames.ProgressBar)
         document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-        timer_progress_bar(parameters.Instructions01Time[countInstr01]) }
+        timer_progress_bar(SPATIAL_DMS_PARAMS.Instructions01Time[countInstr01]) }
     }
 }
 
 var Instructions01_progress_bar_timer_stop = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         clearInterval(interval);
         document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
          }
@@ -281,12 +282,12 @@ var Instructions01Written = {
 
 var Instructions01Spoken = {
     type: jsPsychAudioButtonResponse,
-    stimulus: function() { return parameters.Instructions01Audio[countInstr01] },
+    stimulus: function() { return SPATIAL_DMS_PARAMS.Instructions01Audio[countInstr01] },
     choices: function() { return [LabelNames.Repeat] },
     prompt: function() { return Instructions.Instructions01[countInstr01].page},
     response_allowed_while_playing: false,
     response_ends_trial: true,
-    trial_duration: function() { return parameters.Instructions01Time[countInstr01] },
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.Instructions01Time[countInstr01] },
 };
 
 // This loop allows the user to repeat the instructions
@@ -323,7 +324,7 @@ var if_Instructions01Written = {
     timeline: [Instructions01Written_loop],
     conditional_function: function() {
         document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
-          if ( parameters.ShowInstructions & ! parameters.InstructionsSpoken)
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & ! SPATIAL_DMS_PARAMS.InstructionsSpoken)
           { return true }
           else { return false }
     }
@@ -332,7 +333,7 @@ var if_Instructions01Written = {
 var if_Instructions01Spoken = {
     timeline: [Instructions01Spoken_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & parameters.InstructionsSpoken )
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & SPATIAL_DMS_PARAMS.InstructionsSpoken )
           { return true }
           else { return false }
     }
@@ -346,17 +347,17 @@ var Instructions01 = {
 var Instructions02_progress_bar_timer_start = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
         document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-        timer_progress_bar(parameters.Instructions02Time[countInstr02]) }
+        timer_progress_bar(SPATIAL_DMS_PARAMS.Instructions02Time[countInstr02]) }
     }
 }
 
 var Instructions02_progress_bar_timer_stop = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         clearInterval(interval);
         document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
          }
@@ -379,12 +380,12 @@ var Instructions02Written = {
 
 var Instructions02Spoken = {
     type: jsPsychAudioButtonResponse,
-    stimulus: function() { return parameters.Instructions02Audio[countInstr02] },
+    stimulus: function() { return SPATIAL_DMS_PARAMS.Instructions02Audio[countInstr02] },
     choices: function() { return [LabelNames.Repeat] },
     prompt: function() { return Instructions.Instructions02[countInstr02].page},
     response_allowed_while_playing: false,
     response_ends_trial: true,
-    trial_duration: function() { return parameters.Instructions02Time[countInstr02] },
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.Instructions02Time[countInstr02] },
 };
 
 // This loop allows the user to repeat the instructions
@@ -419,7 +420,7 @@ var Instructions02Written_loop = {
 var if_Instructions02Written = {
     timeline: [Instructions02Written_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & ! parameters.InstructionsSpoken)
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & ! SPATIAL_DMS_PARAMS.InstructionsSpoken)
           { return true }
           else { return false }
     }
@@ -428,7 +429,7 @@ var if_Instructions02Written = {
 var if_Instructions02Spoken = {
     timeline: [Instructions02Spoken_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & parameters.InstructionsSpoken )
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & SPATIAL_DMS_PARAMS.InstructionsSpoken )
           { return true }
           else { return false }
     }
@@ -441,17 +442,17 @@ var Instructions02 = {
 var Instructions03_progress_bar_timer_start = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
         document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-        timer_progress_bar(parameters.Instructions03Time[countInstr03]) }
+        timer_progress_bar(SPATIAL_DMS_PARAMS.Instructions03Time[countInstr03]) }
     }
 }
 
 var Instructions03_progress_bar_timer_stop = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         clearInterval(interval);
         document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
          }
@@ -474,12 +475,12 @@ var Instructions03Written = {
 
 var Instructions03Spoken = {
     type: jsPsychAudioButtonResponse,
-    stimulus: function() { return parameters.Instructions03Audio[countInstr03] },
+    stimulus: function() { return SPATIAL_DMS_PARAMS.Instructions03Audio[countInstr03] },
     choices: function() { return [LabelNames.Repeat] },
     prompt: function() { return Instructions.Instructions03[countInstr03].page},
     response_allowed_while_playing: false,
     response_ends_trial: true,
-    trial_duration: function() { return parameters.Instructions03Time[countInstr03] },
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.Instructions03Time[countInstr03] },
 };
 
 // This loop allows the user to repeat the instructions
@@ -514,7 +515,7 @@ var Instructions03Written_loop = {
 var if_Instructions03Written = {
     timeline: [Instructions03Written_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & ! parameters.InstructionsSpoken)
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & ! SPATIAL_DMS_PARAMS.InstructionsSpoken)
           { return true }
           else { return false }
     }
@@ -523,7 +524,7 @@ var if_Instructions03Written = {
 var if_Instructions03Spoken = {
     timeline: [Instructions03Spoken_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & parameters.InstructionsSpoken )
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & SPATIAL_DMS_PARAMS.InstructionsSpoken )
           { return true }
           else { return false }
     }
@@ -537,17 +538,17 @@ var Instructions03 = {
 var Instructions04_progress_bar_timer_start = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
         document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-        timer_progress_bar(parameters.Instructions04Time[countInstr04]) }
+        timer_progress_bar(SPATIAL_DMS_PARAMS.Instructions04Time[countInstr04]) }
     }
 }
 
 var Instructions04_progress_bar_timer_stop = {
     type: jsPsychCallFunction,
     func: function(){ 
-      if ( parameters.InstructionsSpoken > 0 ) {
+      if ( SPATIAL_DMS_PARAMS.InstructionsSpoken > 0 ) {
         clearInterval(interval);
         document.getElementById("jspsych-progressbar-container").style.visibility = "hidden"
          }
@@ -570,12 +571,12 @@ var Instructions04Written = {
 
 var Instructions04Spoken = {
     type: jsPsychAudioButtonResponse,
-    stimulus: function() { return parameters.Instructions04Audio[countInstr04] },
+    stimulus: function() { return SPATIAL_DMS_PARAMS.Instructions04Audio[countInstr04] },
     choices: function() { return [LabelNames.Repeat] },
     prompt: function() { return Instructions.Instructions04[countInstr04].page},
     response_allowed_while_playing: false,
     response_ends_trial: true,
-    trial_duration: function() { return parameters.Instructions04Time[countInstr04] },
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.Instructions04Time[countInstr04] },
 };
 
 // This loop allows the user to repeat the instructions
@@ -610,7 +611,7 @@ var Instructions04Written_loop = {
 var if_Instructions04Written = {
     timeline: [Instructions04Written_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & ! parameters.InstructionsSpoken)
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & ! SPATIAL_DMS_PARAMS.InstructionsSpoken)
           { return true }
           else { return false }
     }
@@ -619,7 +620,7 @@ var if_Instructions04Written = {
 var if_Instructions04Spoken = {
     timeline: [Instructions04Spoken_loop],
     conditional_function: function() {
-          if ( parameters.ShowInstructions & parameters.InstructionsSpoken )
+          if ( SPATIAL_DMS_PARAMS.ShowInstructions & SPATIAL_DMS_PARAMS.InstructionsSpoken )
           { return true }
           else { return false }
     }
@@ -647,7 +648,7 @@ var StartGIFRecorder = {
 var if_GIFRecorder = {
     timeline: [StartGIFRecorder],
     conditional_function: function() {
-          if ( parameters.RecordGIF )
+          if ( SPATIAL_DMS_PARAMS.RecordGIF )
           { return true }
           else { return false }
     }
