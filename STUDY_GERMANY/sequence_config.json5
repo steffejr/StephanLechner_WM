@@ -1,7 +1,7 @@
 {
   "sequence": [
     "/experiments/WELCOME/welcome.html",
-    "/experiments/EXPERIMENT_SpatialDMS/SpatialDMS.html",
+    "/experiments/EXPERIMENT_SpatialDMS/spatial_delayed_match_sample.html",
     "/experiments/EXPERIMENT_BIOLOGICAL_MOTION/biological_motion.html",
     "/experiments/EXPERIMENT_FINGERTAPPING/fingertapping.html",
     "/experiments/EXPERIMENT_MIND_WANDERING/mind_wandering.html",
@@ -18,7 +18,7 @@
 
 
   // ------ SPATIAL DMS ----
-    "spatial_dms": {
+    "spatial_delayed_match_sample": {
       	"ShowWelcome": false,
         "WelcomeSpoken": false,
         "ShowThankYou": false,
