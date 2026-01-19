@@ -38,7 +38,11 @@
         "RetOnTime": 3200,
         "ProbeOnTime": 2500,
       // This is the intertrial interval. 
-        "ITITime": 1000
+        "ITITime": 1000,
+        "ButtonLabels": "function(){ return ['Yes','No']}",
+    	  "KeyboardValues": "function(){ return ['arrowleft','arrowright']}",
+	      "KeyboardMappings": "function(){ return [true,false]}"
+
     },
   
 

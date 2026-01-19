@@ -161,6 +161,7 @@ function ReturnElementsFromPermute(count, N) {
   var shuffledValues = shuffle(Array.from(Array(N).keys()))
   return shuffledValues.slice(0,count)
 }
+
 // Buttons added to the top of each task page for navigation and ending the experiment  
 function returnToUsageManager(HomeFlag) {
   console.log(jatos.studySessionData)
