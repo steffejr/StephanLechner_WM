@@ -703,3 +703,5 @@ spatial_dms_instructions02,"First, there will be some practice trials with feedb
 spatial_dms_instructions03,Now you will perfom the test with no feedback.,,,,,,,,,,,,,
 spatial_dms_welcome_text,This is the Spatial Delayed Match to Sample Task.,,,,,,,,,,,,,
 spatial_dms_thankyou_text,Thank you,,,,,,,,,,,,,
+spatial_dms_feedback_correct,CORRECT!,,,,,,,,,,,,,
+spatial_dms_feedback_incorrect,INCORRECT,,,,,,,,,,,,,

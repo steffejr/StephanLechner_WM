@@ -37,6 +37,7 @@
         "StimOnTime": 2500,
         "RetOnTime": 3200,
         "ProbeOnTime": 2500,
+        "ProbeColor": "function(){ return 'blue'}",
       // This is the intertrial interval. 
         "ITITime": 1000,
         "ButtonLabels": "function(){ return ['Yes','No']}",

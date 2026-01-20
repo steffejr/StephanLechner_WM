@@ -1,4 +1,4 @@
-function CalculateRadius(CanvasWidth, CanvasHeight)
+function CalculateRadius(CanvasWidth, CanvasHeight, GridCountX)
 {
     var CircleRadius
     if ( CanvasWidth > CanvasHeight) {
