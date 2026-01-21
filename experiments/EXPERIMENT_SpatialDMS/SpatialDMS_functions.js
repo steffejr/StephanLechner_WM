@@ -11,6 +11,7 @@ function CalculateRadius(CanvasWidth, CanvasHeight, GridCountX)
 }
 
 function filledCirc(canvas, x, y, radius, color) {
+  console.log(canvas)
     var ctx = canvas.getContext("2d");
     ctx.beginPath();
     ctx.moveTo(x,y);

@@ -1,8 +1,10 @@
 var jsPsychHtmlButtonResponseTouchscreen = (function (jspsych) {
   'use strict';
 
+    var version = "0.0.1";
   const info = {
       name: "html-button-response-touchscreen",
+      version,
       parameters: {
           /** The HTML string to be displayed */
           stimulus: {
@@ -69,6 +71,7 @@ var jsPsychHtmlButtonResponseTouchscreen = (function (jspsych) {
               default: true,
           },
       },
+      data: {},
   };
   /**
    * html-button-response

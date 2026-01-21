@@ -60,7 +60,7 @@ jatos.onLoad(function() {
     const GridCountY = 6
     const NumberLocations = GridCountX*GridCountY
     var CurrentLocations
-    const CircleColor = 'yellow'
+    const CircleColor = 'black'
     if ( window.innerWidth < window.innerHeight )
     { 
         CanvasHeight = window.innerWidth
@@ -87,161 +87,161 @@ jatos.onLoad(function() {
 
 
     var setupPractice = {
-    type: jsPsychCallFunction,
-    func: function() {
-        stair1 = new Stair(SPATIAL_DMS_PARAMS.StartValue, SPATIAL_DMS_PARAMS.MinValue, 
-            SPATIAL_DMS_PARAMS.MaxValue, SPATIAL_DMS_PARAMS.MaxReversals, SPATIAL_DMS_PARAMS.NPracticeTrials,
-            SPATIAL_DMS_PARAMS.StepSize, SPATIAL_DMS_PARAMS.NUp, SPATIAL_DMS_PARAMS.NDown, 
-            SPATIAL_DMS_PARAMS.FastStart);
-        //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
-        //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-        //jsPsych.setProgressBar(0)
-        FeedbackFlag = true
-        console.log(stair1)
+        type: jsPsychCallFunction,
+        func: function() {
+            stair1 = new Stair(SPATIAL_DMS_PARAMS.StartValue, SPATIAL_DMS_PARAMS.MinValue, 
+                SPATIAL_DMS_PARAMS.MaxValue, SPATIAL_DMS_PARAMS.MaxReversals, SPATIAL_DMS_PARAMS.NPracticeTrials,
+                SPATIAL_DMS_PARAMS.StepSize, SPATIAL_DMS_PARAMS.NUp, SPATIAL_DMS_PARAMS.NDown, 
+                SPATIAL_DMS_PARAMS.FastStart);
+            //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
+            //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
+            //jsPsych.setProgressBar(0)
+            FeedbackFlag = true
+            console.log(stair1)
         }
     }
     var setupTest = {
-    type: jsPsychCallFunction,
-    func: function() {
-        stair1 = new Stair(SPATIAL_DMS_PARAMS.StartValue, SPATIAL_DMS_PARAMS.MinValue, 
-            SPATIAL_DMS_PARAMS.MaxValue, SPATIAL_DMS_PARAMS.MaxReversals, SPATIAL_DMS_PARAMS.MaxTrials,
-            SPATIAL_DMS_PARAMS.StepSize, SPATIAL_DMS_PARAMS.NUp, SPATIAL_DMS_PARAMS.NDown, 
-            SPATIAL_DMS_PARAMS.FastStart);
-        //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
-        //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-        //jsPsych.setProgressBar(0)
-        FeedbackFlag = true
-        console.log(stair1)
+        type: jsPsychCallFunction,
+        func: function() {
+            stair1 = new Stair(SPATIAL_DMS_PARAMS.StartValue, SPATIAL_DMS_PARAMS.MinValue, 
+                SPATIAL_DMS_PARAMS.MaxValue, SPATIAL_DMS_PARAMS.MaxReversals, SPATIAL_DMS_PARAMS.MaxTrials,
+                SPATIAL_DMS_PARAMS.StepSize, SPATIAL_DMS_PARAMS.NUp, SPATIAL_DMS_PARAMS.NDown, 
+                SPATIAL_DMS_PARAMS.FastStart);
+            //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
+            //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
+            //jsPsych.setProgressBar(0)
+            FeedbackFlag = false
+            console.log(stair1)
         }
     }
     var VisualStimulus = {
-    type: jsPsychCanvasButtonResponse,
-    stimulus: function(c) {
-        CurrentLoad = stair1.Current
-        CurrentLocations = ReturnElementsFromPermute(CurrentLoad, NumberLocations)
-        for ( var i = 0; i < CurrentLoad; i++ ) {
-        var temp = mapLinearIndexToGridIndex(CurrentLocations[i] ,GridCountX, GridCountY)
-        filledCirc(c, CircleRadius+(temp[0]*2*CircleRadius),CircleRadius+(temp[1]*2*CircleRadius),CircleRadius, CircleColor);
-        }
-        CanvasText(c, (CanvasScale*CanvasWidth)/2+0, (CanvasScale*CanvasHeight)/2+0, "+")
-//        document.getElementById('jspsych-canvas-button-response-button-0').style.visibility = 'hidden';
-    },
-    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: ['dummy'],
-    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-    prompt: '',
-    trial_duration: function() { return SPATIAL_DMS_PARAMS.StimOnTime },
+        type: jsPsychCanvasButtonResponse,
+        stimulus: function(c) {
+            CurrentLoad = stair1.Current
+            CurrentLocations = ReturnElementsFromPermute(CurrentLoad, NumberLocations)
+            for ( var i = 0; i < CurrentLoad; i++ ) {
+            var temp = mapLinearIndexToGridIndex(CurrentLocations[i] ,GridCountX, GridCountY)
+            filledCirc(c, CircleRadius+(temp[0]*2*CircleRadius),CircleRadius+(temp[1]*2*CircleRadius),CircleRadius, CircleColor);
+            }
+            CanvasText(c, (CanvasScale*CanvasWidth)/2+0, (CanvasScale*CanvasHeight)/2+0, "+")
+    //        document.getElementById('jspsych-canvas-button-response-button-0').style.visibility = 'hidden';
+        },
+        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+        choices: [],
+        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+        prompt: '',
+        trial_duration: function() { return SPATIAL_DMS_PARAMS.StimOnTime },
     };
 
     var VisualProbe = {
-    type: jsPsychCanvasButtonResponse,
-    stimulus: function(c) {
-        // decide if this is a positive or negative probe trial
-        Probe = Math.round(Math.random())
-        var Loc
-        if ( Probe == 1 ) {
-        console.log("POSITIVE PROBE")
-        Loc = shuffle(CurrentLocations).slice(0,1)
-        }
-        else {
-        console.log("NEGATIVE PROBE")
-        Loc = NegativeProbeLocation(CurrentLocations, NumberLocations)
-        }
-        var temp = mapLinearIndexToGridIndex(Loc ,GridCountX, GridCountY)
-        filledCirc(c, CircleRadius+(temp[0]*2*CircleRadius),CircleRadius+(temp[1]*2*CircleRadius),CircleRadius, SPATIAL_DMS_PARAMS.ProbeColor);
-        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
-    },
-    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth ],
-    choices: function() { return SPATIAL_DMS_PARAMS.ButtonLabels},
-    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+        type: jsPsychCanvasButtonResponse,
+        stimulus: function(c) {
+            // decide if this is a positive or negative probe trial
+            Probe = Math.round(Math.random())
+            var Loc
+            if ( Probe == 1 ) {
+            console.log("POSITIVE PROBE")
+            Loc = shuffle(CurrentLocations).slice(0,1)
+            }
+            else {
+            console.log("NEGATIVE PROBE")
+            Loc = NegativeProbeLocation(CurrentLocations, NumberLocations)
+            }
+            var temp = mapLinearIndexToGridIndex(Loc ,GridCountX, GridCountY)
+            filledCirc(c, CircleRadius+(temp[0]*2*CircleRadius),CircleRadius+(temp[1]*2*CircleRadius),CircleRadius, SPATIAL_DMS_PARAMS.ProbeColor);
+            CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
+        },
+        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth ],
+        choices: function() { return SPATIAL_DMS_PARAMS.ButtonLabels},
+        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
 
-    prompt: '',
-    trial_duration: function() { return SPATIAL_DMS_PARAMS.ProbeOnTime },
-    
-    on_finish: function(data){
-        var ResponseMapping = SPATIAL_DMS_PARAMS.KeyboardValues
-        var KeyboardMappings = SPATIAL_DMS_PARAMS.KeyboardMappings
+        prompt: '',
+        trial_duration: function() { return SPATIAL_DMS_PARAMS.ProbeOnTime },
+        
+        on_finish: function(data){
+            var ResponseMapping = SPATIAL_DMS_PARAMS.KeyboardValues
+            var KeyboardMappings = SPATIAL_DMS_PARAMS.KeyboardMappings
 
-        var ResponseIndex = ResponseMapping.indexOf(data.response)
+            var ResponseIndex = ResponseMapping.indexOf(data.response)
 
-        // Note that the response buttons are in the order of 0,1,2,3,4
-        // Therefore, the left button is a zero and the right button is a one
-        // Response mapping (using one and zero) indicates which values are yes (one)
-        // and which is no (zero)
-        if ( Probe == 1 && SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
-        { 
-        data.correct = 1
-        FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
-        stair1.Decide(true, data.rt)
+            // Note that the response buttons are in the order of 0,1,2,3,4
+            // Therefore, the left button is a zero and the right button is a one
+            // Response mapping (using one and zero) indicates which values are yes (one)
+            // and which is no (zero)
+            if ( Probe == 1 && SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
+            { 
+            data.correct = 1
+            FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
+            stair1.Decide(true, data.rt)
+            }
+            else if ( Probe == 0 && ! SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
+            { 
+            data.correct = 1
+            FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
+            stair1.Decide(true, data.rt)
+            } 
+            else 
+            {
+            data.correct = 0
+            FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_incorrect
+            stair1.Decide(false, data.rt)
+            }
+            data.CurrentLocations = CurrentLocations
+            data.Load = CurrentLoad
+            data.TrialType = 'Probe'
         }
-        else if ( Probe == 0 && ! SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
-        { 
-        data.correct = 1
-        FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
-        stair1.Decide(true, data.rt)
-        } 
-        else 
-        {
-        data.correct = 0
-        FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_incorrect
-        stair1.Decide(false, data.rt)
-        }
-        data.CurrentLocations = CurrentLocations
-        data.Load = CurrentLoad
-        data.TrialType = 'Probe'
-    }
     };
 
     var VisualMask = {
-    type: jsPsychCanvasButtonResponse,
-    stimulus: function(c) {
-        for ( var i = 0; i < GridCountX; i++ ) 
-        {
-        for ( var j = 0; j < GridCountY; j++ ) 
-        {
-            filledCirc(c, CircleRadius+(i*2*CircleRadius),CircleRadius+(j*2*CircleRadius),CircleRadius, CircleColor);
-        }
-        }
-        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
-        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
-    },
-    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: ['dummy'],
-    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-    prompt: '',
-    trial_duration: function() { return SPATIAL_DMS_PARAMS.MaskOnTime },
+        type: jsPsychCanvasButtonResponse,
+        stimulus: function(c) {
+            for ( var i = 0; i < GridCountX; i++ ) 
+            {
+            for ( var j = 0; j < GridCountY; j++ ) 
+            {
+                filledCirc(c, CircleRadius+(i*2*CircleRadius),CircleRadius+(j*2*CircleRadius),CircleRadius, CircleColor);
+            }
+            }
+            CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
+            document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+        },
+        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+        choices: ['dummy'],
+        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+        prompt: '',
+        trial_duration: function() { return SPATIAL_DMS_PARAMS.MaskOnTime },
     };
 
     var RetentionCanvas = {
-    type: jsPsychCanvasButtonResponse,
-    stimulus: function(c) {
-        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'white')
-        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
-    },
-    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: ['dummy'],
-    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-    prompt: '',
-    trial_duration: function() { return SPATIAL_DMS_PARAMS.RetOnTime },
-    }
+        type: jsPsychCanvasButtonResponse,
+        stimulus: function(c) {
+            CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'black')
+            document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+        },
+        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+        choices: ['dummy'],
+        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+        prompt: '',
+        trial_duration: function() { return SPATIAL_DMS_PARAMS.RetOnTime },
+        }
 
     var Fix = {
-    type: jsPsychCanvasButtonResponse,
-    stimulus: function(c) {
-        if ( FeedbackFlag )
-        { CanvasText(c,CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, FeedbackText, 'white') }
-        else
-        { CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'red') }
-        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
-    },
-    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: ['dummy'],
-    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-    prompt: '',
-    trial_duration: function() { return SPATIAL_DMS_PARAMS.ITITime },
-    // on_finish: function(data){
-    //   data.trialType = "fixation"
-    // }
+        type: jsPsychCanvasButtonResponse,
+        stimulus: function(c) {
+            if ( FeedbackFlag )
+            { CanvasText(c,CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, FeedbackText, 'black') }
+            else
+            { CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'red') }
+            document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+        },
+        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+        choices: [],
+        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+        prompt: '',
+        trial_duration: function() { return SPATIAL_DMS_PARAMS.ITITime },
+        on_finish: function(data){
+           data.trialType = "fixation"
+        }
     } 
 
 
@@ -310,12 +310,16 @@ jatos.onLoad(function() {
         choices: [jatos.studySessionData.translations.button_continue],  
     }
 
-    timeline.push(setupPractice)
-    timeline.push(loop_node)
+
     timeline.push(WelcomeWritten)
     timeline.push(Instructions01a)
     timeline.push(Instructions01b)
     timeline.push(Instructions01c)
     timeline.push(Instructions02)
+    timeline.push(setupPractice)
+    timeline.push(loop_node)
+    timeline.push(setupTest)
+    timeline.push(loop_node)
+    
     jsPsych.run(timeline);
 })
