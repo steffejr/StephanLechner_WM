@@ -101,17 +101,17 @@ jatos.onLoad(function() {
         }
     }
     var setupTest = {
-        type: jsPsychCallFunction,
-        func: function() {
-            stair1 = new Stair(SPATIAL_DMS_PARAMS.StartValue, SPATIAL_DMS_PARAMS.MinValue, 
-                SPATIAL_DMS_PARAMS.MaxValue, SPATIAL_DMS_PARAMS.MaxReversals, SPATIAL_DMS_PARAMS.MaxTrials,
-                SPATIAL_DMS_PARAMS.StepSize, SPATIAL_DMS_PARAMS.NUp, SPATIAL_DMS_PARAMS.NDown, 
-                SPATIAL_DMS_PARAMS.FastStart);
-            //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
-            //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
-            //jsPsych.setProgressBar(0)
-            FeedbackFlag = false
-            console.log(stair1)
+    type: jsPsychCallFunction,
+    func: function() {
+        stair1 = new Stair(SPATIAL_DMS_PARAMS.StartValue, SPATIAL_DMS_PARAMS.MinValue, 
+            SPATIAL_DMS_PARAMS.MaxValue, SPATIAL_DMS_PARAMS.MaxReversals, SPATIAL_DMS_PARAMS.MaxTrials,
+            SPATIAL_DMS_PARAMS.StepSize, SPATIAL_DMS_PARAMS.NUp, SPATIAL_DMS_PARAMS.NDown, 
+            SPATIAL_DMS_PARAMS.FastStart);
+        //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
+        //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
+        //jsPsych.setProgressBar(0)
+        FeedbackFlag = false
+        console.log(stair1)
         }
     }
     var VisualStimulus = {
@@ -124,10 +124,15 @@ jatos.onLoad(function() {
             filledCirc(c, CircleRadius+(temp[0]*2*CircleRadius),CircleRadius+(temp[1]*2*CircleRadius),CircleRadius, CircleColor);
             }
             CanvasText(c, (CanvasScale*CanvasWidth)/2+0, (CanvasScale*CanvasHeight)/2+0, "+")
-    //        document.getElementById('jspsych-canvas-button-response-button-0').style.visibility = 'hidden';
+            //document.getElementById('jspsych-canvas-button-response-buttongrp').visibility = 'hidden';
+        },
+        on_load: function() 
+        {            
+            var x = document.getElementById('jspsych-canvas-button-response-btngroup')
+            x.style.display = "none";
         },
         canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-        choices: [],
+        choices: ['dummy'],
         valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
         prompt: '',
         trial_duration: function() { return SPATIAL_DMS_PARAMS.StimOnTime },
@@ -193,55 +198,55 @@ jatos.onLoad(function() {
     };
 
     var VisualMask = {
-        type: jsPsychCanvasButtonResponse,
-        stimulus: function(c) {
-            for ( var i = 0; i < GridCountX; i++ ) 
-            {
-            for ( var j = 0; j < GridCountY; j++ ) 
-            {
-                filledCirc(c, CircleRadius+(i*2*CircleRadius),CircleRadius+(j*2*CircleRadius),CircleRadius, CircleColor);
-            }
-            }
-            CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
-            document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
-        },
-        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-        choices: ['dummy'],
-        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-        prompt: '',
-        trial_duration: function() { return SPATIAL_DMS_PARAMS.MaskOnTime },
+    type: jsPsychCanvasButtonResponse,
+    stimulus: function(c) {
+        for ( var i = 0; i < GridCountX; i++ ) 
+        {
+        for ( var j = 0; j < GridCountY; j++ ) 
+        {
+            filledCirc(c, CircleRadius+(i*2*CircleRadius),CircleRadius+(j*2*CircleRadius),CircleRadius, CircleColor);
+        }
+        }
+        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
+        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+    },
+    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+    choices: [],
+    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+    prompt: '',
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.MaskOnTime },
     };
 
     var RetentionCanvas = {
-        type: jsPsychCanvasButtonResponse,
-        stimulus: function(c) {
-            CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'black')
-            document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
-        },
-        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-        choices: ['dummy'],
-        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-        prompt: '',
-        trial_duration: function() { return SPATIAL_DMS_PARAMS.RetOnTime },
-        }
+    type: jsPsychCanvasButtonResponse,
+    stimulus: function(c) {
+        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'white')
+        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+    },
+    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+    choices: [],
+    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+    prompt: '',
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.RetOnTime },
+    }
 
     var Fix = {
-        type: jsPsychCanvasButtonResponse,
-        stimulus: function(c) {
-            if ( FeedbackFlag )
-            { CanvasText(c,CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, FeedbackText, 'black') }
-            else
-            { CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'red') }
-            document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
-        },
-        canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-        choices: [],
-        valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-        prompt: '',
-        trial_duration: function() { return SPATIAL_DMS_PARAMS.ITITime },
-        on_finish: function(data){
-           data.trialType = "fixation"
-        }
+    type: jsPsychCanvasButtonResponse,
+    stimulus: function(c) {
+        if ( FeedbackFlag )
+        { CanvasText(c,CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, FeedbackText, 'white') }
+        else
+        { CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'red') }
+        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+    },
+    canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
+    choices: [],
+    valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
+    prompt: '',
+    trial_duration: function() { return SPATIAL_DMS_PARAMS.ITITime },
+    // on_finish: function(data){
+    //   data.trialType = "fixation"
+    // }
     } 
 
 
@@ -309,17 +314,27 @@ jatos.onLoad(function() {
         //margin_horizontal: function() { return GapBetweenButtons },
         choices: [jatos.studySessionData.translations.button_continue],  
     }
+    var Instructions03 = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: function() { 
+            var Str = jatos.studySessionData.translations.spatial_dms_instructions03 
+            return Str
+        },
+        post_trial_gap: 0,
+        //margin_horizontal: function() { return GapBetweenButtons },
+        choices: [jatos.studySessionData.translations.button_continue],  
+    }
 
 
-    timeline.push(WelcomeWritten)
+    /*timeline.push(WelcomeWritten)
     timeline.push(Instructions01a)
     timeline.push(Instructions01b)
     timeline.push(Instructions01c)
-    timeline.push(Instructions02)
+    timeline.push(Instructions02)*/
     timeline.push(setupPractice)
     timeline.push(loop_node)
+    timeline.push(Instructions03)
     timeline.push(setupTest)
     timeline.push(loop_node)
-    
     jsPsych.run(timeline);
 })
