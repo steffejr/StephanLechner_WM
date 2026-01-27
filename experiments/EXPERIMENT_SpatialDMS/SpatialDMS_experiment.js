@@ -112,11 +112,10 @@ var VisualProbe = {
   trial_duration: function() { return parameters.ProbeOnTime },
   
   on_finish: function(data){
-    var ResponseMapping = parameters.KeyboardValues
-    var KeyboardMappings = parameters.KeyboardMappings
+    var ResponseMapping = parameters.KeyboardValues // arrowlfet, arrowright
+    var KeyboardMappings = parameters.KeyboardMappings // true, false
 
     var ResponseIndex = ResponseMapping.indexOf(data.response)
-
     // Note that the response buttons are in the order of 0,1,2,3,4
     // Therefore, the left button is a zero and the right button is a one
     // Response mapping (using one and zero) indicates which values are yes (one)

@@ -29,7 +29,7 @@ var jsPsychCanvasButtonResponse = (function (jspsych) {
           button_html: {
               type: jspsych.ParameterType.HTML_STRING,
               pretty_name: "Button HTML",
-              default: '<button class="jspsych-btn">%choice%</button>',
+              default: ['<button class="jspsych-btn">%choice%</button>'],
               array: true,
           },
           /** Any content here will be displayed under the button. */
@@ -145,6 +145,7 @@ var jsPsychCanvasButtonResponse = (function (jspsych) {
               display_element
                   .querySelector("#jspsych-canvas-button-response-button-" + i)
                   .addEventListener("click", (e) => {
+                    console.log("A BUTTON WAS CLICKED!")
                   var btn_el = e.currentTarget;
                   var choice = btn_el.getAttribute("data-choice"); // don't use dataset for jsdom compatibility
                   after_response(choice);

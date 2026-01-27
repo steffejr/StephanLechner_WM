@@ -81,7 +81,10 @@ jatos.onLoad(function() {
     
     const MAX_TRIALS = SPATIAL_DMS_PARAMS.MaxTrials;
     console.log("Max Trials: "+MAX_TRIALS)
-    
+    console.log("Keyboard mappings are:")
+    console.log(SPATIAL_DMS_PARAMS.KeyboardMappings)
+    console.log("Keyboard values are:")
+    console.log(SPATIAL_DMS_PARAMS.KeyboardValues)    
     // test mode - set to true for quick testing
     const RUN_TEST = true;
 
@@ -129,7 +132,7 @@ jatos.onLoad(function() {
         on_load: function() 
         {            
             var x = document.getElementById('jspsych-canvas-button-response-btngroup')
-            x.style.display = "none";
+            x.style.visibility = "hidden";
         },
         canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
         choices: ['dummy'],
@@ -159,15 +162,22 @@ jatos.onLoad(function() {
         canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth ],
         choices: function() { return SPATIAL_DMS_PARAMS.ButtonLabels},
         valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
-
+        button_html: ['<button class="jspsych-btn">%choice%</button>', '<button class="jspsych-btn">%choice%</button>'],
         prompt: '',
         trial_duration: function() { return SPATIAL_DMS_PARAMS.ProbeOnTime },
         
         on_finish: function(data){
-            var ResponseMapping = SPATIAL_DMS_PARAMS.KeyboardValues
-            var KeyboardMappings = SPATIAL_DMS_PARAMS.KeyboardMappings
-
-            var ResponseIndex = ResponseMapping.indexOf(data.response)
+            var ResponseMapping = SPATIAL_DMS_PARAMS.KeyboardValues // arrowleft, arrowright
+            var KeyboardMappings = SPATIAL_DMS_PARAMS.KeyboardMappings // true, false
+            var response = data.response
+            console.log("RESPONSE:")
+            console.log(response)
+            // What to do if responses are made via the button presses?
+            if ( response == 0 || response == 1 )
+            { response = ResponseMapping[response] }
+            // make the response lowercase to match the keyboard mappings
+            response = response.toLowerCase()
+            var ResponseIndex = ResponseMapping.indexOf(response)
 
             // Note that the response buttons are in the order of 0,1,2,3,4
             // Therefore, the left button is a zero and the right button is a one
@@ -208,10 +218,15 @@ jatos.onLoad(function() {
         }
         }
         CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
-        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+        //document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+    },
+    on_load: function() 
+    {            
+        var x = document.getElementById('jspsych-canvas-button-response-btngroup')
+        x.style.visibility = "hidden";
     },
     canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: [],
+    choices: ['dummy'],
     valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
     prompt: '',
     trial_duration: function() { return SPATIAL_DMS_PARAMS.MaskOnTime },
@@ -220,11 +235,16 @@ jatos.onLoad(function() {
     var RetentionCanvas = {
     type: jsPsychCanvasButtonResponse,
     stimulus: function(c) {
-        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'white')
-        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+        CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+")
+       // document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+    },
+    on_load: function() 
+    {            
+        var x = document.getElementById('jspsych-canvas-button-response-btngroup')
+        x.style.visibility = "hidden";
     },
     canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: [],
+    choices: ['dummy'],
     valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
     prompt: '',
     trial_duration: function() { return SPATIAL_DMS_PARAMS.RetOnTime },
@@ -234,13 +254,18 @@ jatos.onLoad(function() {
     type: jsPsychCanvasButtonResponse,
     stimulus: function(c) {
         if ( FeedbackFlag )
-        { CanvasText(c,CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, FeedbackText, 'white') }
+        { CanvasText(c,CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, FeedbackText,'red') }
         else
         { CanvasText(c, CanvasScale*CanvasWidth/2+0, CanvasScale*CanvasHeight/2+0, "+", 'red') }
-        document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
+        // document.getElementById('jspsych-canvas-button-response-btngroup').style.visibility = 'hidden';
     },
+    on_load: function() 
+        {            
+            var x = document.getElementById('jspsych-canvas-button-response-btngroup')
+            x.style.visibility = "hidden";
+        },
     canvas_size: [CanvasScale*CanvasHeight, CanvasScale*CanvasWidth],
-    choices: [],
+    choices: ['dummy'],
     valid_choices: function() { return SPATIAL_DMS_PARAMS.KeyboardValues },
     prompt: '',
     trial_duration: function() { return SPATIAL_DMS_PARAMS.ITITime },
@@ -325,7 +350,14 @@ jatos.onLoad(function() {
         choices: [jatos.studySessionData.translations.button_continue],  
     }
 
-
+    var SendData = {
+    type: jsPsychCallFunction,
+    func: function() {
+        var data = jsPsych.data.get()
+        Results = DMS_Scoring(stair1, data)    
+        jsPsych.finishTrial(Results)
+    },
+    }    
     /*timeline.push(WelcomeWritten)
     timeline.push(Instructions01a)
     timeline.push(Instructions01b)
@@ -336,5 +368,6 @@ jatos.onLoad(function() {
     timeline.push(Instructions03)
     timeline.push(setupTest)
     timeline.push(loop_node)
+    timeline.push(SendData)
     jsPsych.run(timeline);
 })
