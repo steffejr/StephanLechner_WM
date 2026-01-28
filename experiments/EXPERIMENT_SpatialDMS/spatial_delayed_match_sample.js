@@ -299,6 +299,18 @@ jatos.onLoad(function() {
         choices: [jatos.studySessionData.translations.button_continue],  
     }
     
+var thank_you = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: function() {
+      return jatos.studySessionData.translations.goodbye_text
+    },
+    post_trial_gap: 0,    
+    choices: [jatos.studySessionData.translations.button_continue],  
+    on_finish: function() {
+        jatos.endStudy()
+    }
+}
+
     var Instructions01a = {
         type: jsPsychHtmlButtonResponse,
         stimulus: function() { 
@@ -356,18 +368,20 @@ jatos.onLoad(function() {
         var data = jsPsych.data.get()
         Results = DMS_Scoring(stair1, data)    
         jsPsych.finishTrial(Results)
+        jatos.submitResultData(Results)
     },
     }    
-    /*timeline.push(WelcomeWritten)
+    timeline.push(WelcomeWritten)
     timeline.push(Instructions01a)
     timeline.push(Instructions01b)
     timeline.push(Instructions01c)
-    timeline.push(Instructions02)*/
+    timeline.push(Instructions02)
     timeline.push(setupPractice)
     timeline.push(loop_node)
     timeline.push(Instructions03)
     timeline.push(setupTest)
     timeline.push(loop_node)
     timeline.push(SendData)
+    timeline.push(thank_you)
     jsPsych.run(timeline);
 })
