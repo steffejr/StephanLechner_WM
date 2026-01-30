@@ -170,36 +170,59 @@ jatos.onLoad(function() {
             var ResponseMapping = SPATIAL_DMS_PARAMS.KeyboardValues // arrowleft, arrowright
             var KeyboardMappings = SPATIAL_DMS_PARAMS.KeyboardMappings // true, false
             var response = data.response
-            console.log("RESPONSE:")
-            console.log(response)
+                console.log("Response: "+response)
+                console.log("Response Index: "+ResponseIndex)
+                console.log("Response mapping: "+ResponseMapping)
             // What to do if responses are made via the button presses?
-            if ( response == 0 || response == 1 )
-            { response = ResponseMapping[response] }
-            // make the response lowercase to match the keyboard mappings
-            response = response.toLowerCase()
-            var ResponseIndex = ResponseMapping.indexOf(response)
+            var ResponseIndex
+            if ( response != null )
+            { 
+                // button presss responses
+                if ( response == 0 || response == 1 )
+                { 
+                    ResponseIndex = response
+                }
+                else 
+                    // Keyboard responses
+                {
+                    response = response.toLowerCase()
+                    ResponseIndex = ResponseMapping.indexOf(response)
+                }
+            
 
-            // Note that the response buttons are in the order of 0,1,2,3,4
-            // Therefore, the left button is a zero and the right button is a one
-            // Response mapping (using one and zero) indicates which values are yes (one)
-            // and which is no (zero)
-            if ( Probe == 1 && SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
-            { 
-            data.correct = 1
-            FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
-            stair1.Decide(true, data.rt)
+
+                // Note that the response buttons are in the order of 0,1,2,3,4
+                // Therefore, the left button is a zero and the right button is a one
+                // Response mapping (using one and zero) indicates which values are yes (one)
+                // and which is no (zero)
+                if ( Probe == 1 && SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
+                { 
+                    console.log("CORRECT")
+                    data.correct = 1
+                    FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
+                    stair1.Decide(true, data.rt)
+                }
+                else if ( Probe == 0 && ! SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
+                { 
+                    console.log("CORRECT")
+                    data.correct = 1
+                    FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
+                    stair1.Decide(true, data.rt)
+                } 
+                else 
+                {
+                    console.log("NOT CORRECT")
+                    data.correct = 0
+                    FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_incorrect
+                    stair1.Decide(false, data.rt)
+                }
             }
-            else if ( Probe == 0 && ! SPATIAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
-            { 
-            data.correct = 1
-            FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_correct
-            stair1.Decide(true, data.rt)
-            } 
             else 
             {
-            data.correct = 0
-            FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_incorrect
-            stair1.Decide(false, data.rt)
+                console.log("NOT CORRECT")
+                data.correct = 0
+                FeedbackText = jatos.studySessionData.translations.spatial_dms_feedback_incorrect
+                stair1.Decide(false, data.rt)
             }
             data.CurrentLocations = CurrentLocations
             data.Load = CurrentLoad
