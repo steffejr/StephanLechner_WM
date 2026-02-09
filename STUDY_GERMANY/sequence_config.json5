@@ -1,6 +1,7 @@
 {
   "sequence": [
     "/experiments/WELCOME/welcome.html",
+    "/experiments/EXPERIMENT_SpatialDMS/verbal_delayed_match_sample.html",
     "/experiments/EXPERIMENT_SpatialDMS/spatial_delayed_match_sample.html",
     "/experiments/EXPERIMENT_BIOLOGICAL_MOTION/biological_motion.html",
     "/experiments/EXPERIMENT_FINGERTAPPING/fingertapping.html",
@@ -43,10 +44,36 @@
         "ButtonLabels": "function(){ return ['Yes','No']}",
     	  "KeyboardValues": "function(){ return ['arrowleft','arrowright']}",
 	      "KeyboardMappings": "function(){ return [true,false]}"
-
     },
   
-
+  // ------ VERBAL DMS ----
+    "verbal_delayed_match_sample": {
+      	"ShowWelcome": false,
+        "WelcomeSpoken": false,
+        "ShowThankYou": false,
+        "ShowInstructions": true,
+        "MaxTrials": 10,
+        "NPracticeTrials": 4,
+        "MaxReversals": 15,
+        "StartValue": 1,
+        "MinValue": 1,
+        "MaxValue": 20,
+        "StepSize": 1,
+        "NUp": 3,
+        "NDown": 1,
+        "FastStart": true,
+        "MaskOnTime": 300,
+        "StimOnTime": 2500,
+        "RetOnTime": 3200,
+        "ProbeOnTime": 2500,
+        "ProbeColor": "function(){ return 'blue'}",
+      // This is the intertrial interval. 
+        "ITITime": 1000,
+        "ButtonLabels": "function(){ return ['Yes','No']}",
+    	  "KeyboardValues": "function(){ return ['arrowleft','arrowright']}",
+	      "KeyboardMappings": "function(){ return [true,false]}"
+    },
+  
     // ------ BIOLOGICAL MOTION ----
     "biological_motion": {
       // SHORT (MAIN) VERSION

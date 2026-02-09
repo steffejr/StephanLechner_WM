@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adaptive Verbal Delayed Match to Sample</title>
+    <script src="jspsych_dist/jspsych.js"></script>
+    <script src="jspsych_dist/plugin-call-function.js"></script>
+    <script src="jspsych_dist/plugin-html-button-response.js"></script>
+    <script src="jspsych_addons/plugin-canvas-button-response.js"></script>
+    <script src="jspsych_addons/plugin-html-button-response-touchscreen.js"></script>
+    <script src="StairClass_functions.js"></script>
+    <script src="NCMGeneralFunctions.js"></script>
+
+    <script src="DMS_Scoring.js"></script>
+    <link href="jspsych_dist/jspsych.css" rel="stylesheet">
+      <style>
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial';
+    }
+    /* ADD THESE LINES */
+    #experiment-container {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial';
+        min-height: 100vh;
+    }
+    .jspsych-display-element {
+        background-color: white;
+        color: black;
+        min-height: 100vh; /* ADD THIS */
+    }
+    .jspsych-content {
+        color: black;
+        max-width: 1000px;
+        margin: 0 auto;
+        font-size: 24px;
+        line-height: 1.6;
+        position: absolute; /* ADD THIS */
+        top: 50%; /* ADD THIS */
+        left: 50%; /* ADD THIS */
+        transform: translate(-50%, -50%); /* ADD THIS */
+        width: 100%; /* ADD THIS */
+    }
+    .fixation {
+        font-size: 80px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+    <div id="jspsych-target"></div>
+    <script src="verbal_delayed_match_sample.js"></script>
+</body>
+</html>
