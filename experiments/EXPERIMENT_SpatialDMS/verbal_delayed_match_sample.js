@@ -37,6 +37,7 @@ jatos.onLoad(function() {
         return config.parameters.verbal_delayed_match_sample;
     })();
     console.log("PARAMETERS")
+    console.log(VERBAL_DMS_PARAMS)
     
     // Prepare the parameters that are stored as functions
     const buttonLabelFunc = eval('(' + VERBAL_DMS_PARAMS.ButtonLabels + ')');
@@ -51,7 +52,7 @@ jatos.onLoad(function() {
     // experiment parameters
     var countInstr = 0
     var Current = 4
-    DMSFontSize = 36
+    DMSFontSize = VERBAL_DMS_PARAMS.DMSFontSize
     var count = 0
     var stair1
     var FeedbackFlag = false
@@ -80,7 +81,11 @@ jatos.onLoad(function() {
             //document.getElementById("jspsych-progressbar-container").style.visibility = "visible"
             //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
             //jsPsych.setProgressBar(0)
+            stimList = new AdaptiveStimulusList();    
+            console.log("STIM LIST: ")
+            console.log(stimList)
             FeedbackFlag = true
+            console.log("STAIR: ")
             console.log(stair1)
         }
     }
@@ -105,12 +110,12 @@ jatos.onLoad(function() {
         console.log("Current: "+stair1.Current)
         console.log("Last Stim: "+stimList.getLastStim())
         console.log("Last Probe: "+stimList.getLastProbe())
-        output = MakeAdaptiveStimulus(stair1.Current, stimList.getLastStim(), stimList.getLastProbe())
+        output = MakeAdaptiveStimulus(stair1.Current, stimList.getLastStim(), stimList.getLastProbe(),VERBAL_DMS_PARAMS.AllowableLetters)
         console.log(output)
         return PutLettersInGridV2(output[0],3,3,700,20,60)
         //return StimulusLetters
       },
-      trial_duration: function() { return parameters.StimOnTime },
+      trial_duration: function() { return VERBAL_DMS_PARAMS.StimOnTime },
       choices: [],
       valid_choices: [],
       prompt: '',
@@ -127,10 +132,10 @@ jatos.onLoad(function() {
       // Each trial also has its own specific cue which occurs BEFORE the stimulus presentation
       // The cue itself is actually made in the setup file and not here. This could be changed if desired
       type: jsPsychHtmlButtonResponse,
-      stimulus: '<p style="font-size:'+DMSFontSize+'px; color:black">+</p>',
+      stimulus: '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:black">+</p>',
       choices: [],
       valid_choices: [],
-      trial_duration: function() { return parameters.RetOnTime},
+      trial_duration: function() { return VERBAL_DMS_PARAMS.RetOnTime},
       //on_finish: function(data){
               // data.trialType = "Retention"
       //},
@@ -139,10 +144,10 @@ jatos.onLoad(function() {
     var Probe = {
       type:jsPsychHtmlButtonResponse,
       stimulus: function() {
-        return '<p style="color:'+ProbeColor+'; font-size:'+DMSFontSize+'px">'+stimList.CurrentProbe+'</p>'
+        return '<p style="color:'+VERBAL_DMS_PARAMS.ProbeColor+'; font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px">'+stimList.CurrentProbe+'</p>'
       },
-      choices: function() { return parameters.ButtonLabels},
-      valid_choices: function() { return parameters.KeyboardValues },
+      choices: function() { return VERBAL_DMS_PARAMS.ButtonLabels},
+      valid_choices: function() { return VERBAL_DMS_PARAMS.KeyboardValues },
       trial_duration: function() { return VERBAL_DMS_PARAMS.ProbeOnTime },
       on_finish: function(data){
         // NEED TO UPDATE THIS BASED ON TEH ADAPTIVE NATURE OF THE TRIALS
@@ -154,8 +159,8 @@ jatos.onLoad(function() {
         data.Load = data.StimLetters.length
         var correct = stimList.getCurrentCorrect() //jsPsych.timelineVariable("Correct", true)
         // in the list of allowable key presses, what is the index of wehat was pressed?
-        var ResponseMapping = parameters.KeyboardValues
-        var KeyboardMappings = parameters.KeyboardMappings
+        var ResponseMapping = VERBAL_DMS_PARAMS.KeyboardValues
+        var KeyboardMappings = VERBAL_DMS_PARAMS.KeyboardMappings
 
         var ResponseIndex = ResponseMapping.indexOf(data.response)
 
@@ -183,9 +188,9 @@ jatos.onLoad(function() {
       stimulus: function(data) {
         console.log(FeedbackFlag)
         if ( FeedbackFlag )
-        {return '<p style="font-size:'+DMSFontSize+'px; color:'+ProbeColor+'">'+FeedbackText+'</p>'}
+        {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+ProbeColor+'">'+FeedbackText+'</p>'}
         else 
-          {return '<p style="font-size:'+DMSFontSize+'px; color:'+ProbeColor+'">+</p>'}
+          {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+ProbeColor+'">+</p>'}
       },
       choices: [],
       valid_choices: [],
@@ -212,7 +217,7 @@ jatos.onLoad(function() {
     var WelcomeWritten = {
         type: jsPsychHtmlButtonResponse,
         stimulus: function() { 
-            var Str = jatos.studySessionData.translations.VERBAL_dms_welcome_text            
+            var Str = jatos.studySessionData.translations.verbal_dms_welcome_text            
             return Str
         },
         post_trial_gap: 0,
@@ -292,13 +297,13 @@ var thank_you = {
         jatos.submitResultData(Results)
     },
     }    
-    timeline.push(WelcomeWritten)
-    timeline.push(Instructions01a)
-    timeline.push(Instructions01b)
-    timeline.push(Instructions01c)
-    timeline.push(Instructions02)
-    // timeline.push(setupPractice)
-    // timeline.push(loop_node)
+    // timeline.push(WelcomeWritten)
+    // timeline.push(Instructions01a)
+    // timeline.push(Instructions01b)
+    // timeline.push(Instructions01c)
+    // timeline.push(Instructions02)
+     timeline.push(setupPractice)
+     timeline.push(loop_node)
     // timeline.push(Instructions03)
     // timeline.push(setupTest)
     // timeline.push(loop_node)
