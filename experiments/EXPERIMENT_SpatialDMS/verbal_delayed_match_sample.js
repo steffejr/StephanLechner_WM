@@ -142,12 +142,13 @@ jatos.onLoad(function() {
     } 
 
     var Probe = {
-      type:jsPsychHtmlButtonResponse,
+      type:jsPsychHtmlButtonResponseTouchscreen,
       stimulus: function() {
         return '<p style="color:'+VERBAL_DMS_PARAMS.ProbeColor+'; font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px">'+stimList.CurrentProbe+'</p>'
       },
       choices: function() { return VERBAL_DMS_PARAMS.ButtonLabels},
       valid_choices: function() { return VERBAL_DMS_PARAMS.KeyboardValues },
+      button_html: ['<button class="jspsych-btn">%choice%</button>', '<button class="jspsych-btn">%choice%</button>'],
       trial_duration: function() { return VERBAL_DMS_PARAMS.ProbeOnTime },
       on_finish: function(data){
         // NEED TO UPDATE THIS BASED ON TEH ADAPTIVE NATURE OF THE TRIALS
@@ -161,6 +162,11 @@ jatos.onLoad(function() {
         // in the list of allowable key presses, what is the index of wehat was pressed?
         var ResponseMapping = VERBAL_DMS_PARAMS.KeyboardValues
         var KeyboardMappings = VERBAL_DMS_PARAMS.KeyboardMappings
+        var response = data.response
+        console.log("Response: "+response)
+        console.log("Response Index: "+ResponseIndex)
+        console.log("Response mapping: "+ResponseMapping)
+
 
         var ResponseIndex = ResponseMapping.indexOf(data.response)
 
@@ -169,12 +175,14 @@ jatos.onLoad(function() {
             data.correct = 1,
             console.log(data)
             stair1.Decide(true, data.rt)
-            FeedbackText = LabelNames.Correct
+            FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_correct
+            // LabelNames.Correct
           }
         else {
           data.correct = 0
           stair1.Decide(false, data.rt)
-          FeedbackText = LabelNames.Incorrect
+          FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_incorrect
+        //   LabelNames.Incorrect
         }
         /* If the ESCAPE key is pressed the current timeline is ended and the thank you screen is shown */
         if (data.response == 27) {jsPsych.end();}
@@ -188,13 +196,13 @@ jatos.onLoad(function() {
       stimulus: function(data) {
         console.log(FeedbackFlag)
         if ( FeedbackFlag )
-        {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+ProbeColor+'">'+FeedbackText+'</p>'}
+        {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+VERBAL_DMS_PARAMS.ProbeColor+'">'+FeedbackText+'</p>'}
         else 
-          {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+ProbeColor+'">+</p>'}
+          {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+VERBAL_DMS_PARAMS.ProbeColor+'">+</p>'}
       },
       choices: [],
       valid_choices: [],
-      trial_duration: function() { return parameters.ITITime},
+      trial_duration: function() { return VERBAL_DMS_PARAMS.ITITime},
      // on_finish: function(data){
      //   data.trialType = "fixation"
      // }
