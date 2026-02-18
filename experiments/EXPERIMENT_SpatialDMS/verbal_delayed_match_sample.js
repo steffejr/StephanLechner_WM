@@ -62,11 +62,6 @@ jatos.onLoad(function() {
     const TESTING_MODE = false;
     
     const MAX_TRIALS = VERBAL_DMS_PARAMS.MaxTrials;
-    console.log("Max Trials: "+MAX_TRIALS)
-    console.log("Keyboard mappings are:")
-    console.log(VERBAL_DMS_PARAMS.KeyboardMappings)
-    console.log("Keyboard values are:")
-    console.log(VERBAL_DMS_PARAMS.KeyboardValues)    
     // test mode - set to true for quick testing
     const RUN_TEST = true;
 
@@ -100,18 +95,17 @@ jatos.onLoad(function() {
         //document.getElementById("progress-bar-text").innerHTML = LabelNames.ProgressBar
         //jsPsych.setProgressBar(0)
         FeedbackFlag = false
-        console.log(stair1)
         }
     }
   
     var Stimulus = {
       type: jsPsychHtmlButtonResponse,
       stimulus: function(){
+        CurrentLoad = stair1.Current
         console.log("Current: "+stair1.Current)
         console.log("Last Stim: "+stimList.getLastStim())
         console.log("Last Probe: "+stimList.getLastProbe())
         output = MakeAdaptiveStimulus(stair1.Current, stimList.getLastStim(), stimList.getLastProbe(),VERBAL_DMS_PARAMS.AllowableLetters)
-        console.log(output)
         return PutLettersInGridV2(output[0],3,3,700,20,60)
         //return StimulusLetters
       },
@@ -163,29 +157,77 @@ jatos.onLoad(function() {
         var ResponseMapping = VERBAL_DMS_PARAMS.KeyboardValues
         var KeyboardMappings = VERBAL_DMS_PARAMS.KeyboardMappings
         var response = data.response
-        console.log("Response: "+response)
-        console.log("Response Index: "+ResponseIndex)
-        console.log("Response mapping: "+ResponseMapping)
+    
+        var ResponseIndex
+            if ( response != null )
+            { 
+                // button presss responses
+                if ( response == 0 || response == 1 )
+                { 
+                    ResponseIndex = response
+                }
+                else 
+                    // Keyboard responses
+                {
+                    response = response.toLowerCase()
+                    ResponseIndex = ResponseMapping.indexOf(response)
+                }
+            
 
 
-        var ResponseIndex = ResponseMapping.indexOf(data.response)
+                // Note that the response buttons are in the order of 0,1,2,3,4
+                // Therefore, the left button is a zero and the right button is a one
+                // Response mapping (using one and zero) indicates which values are yes (one)
+                // and which is no (zero)
+                if ( output[1][1] && VERBAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
+                { 
+                    console.log("CORRECT")
+                    data.correct = 1
+                    FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_correct
+                    stair1.Decide(true, data.rt)
+                }
+                else if ( ! output[1][1] && ! VERBAL_DMS_PARAMS.KeyboardMappings[ResponseIndex]) 
+                { 
+                    console.log("CORRECT")
+                    data.correct = 1
+                    FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_correct
+                    stair1.Decide(true, data.rt)
+                } 
+                else 
+                {
+                    console.log("NOT CORRECT")
+                    data.correct = 0
+                    FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_incorrect
+                    stair1.Decide(false, data.rt)
+                }
+            }
+            else 
+            {
+                console.log("NOT CORRECT")
+                data.correct = 0
+                FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_incorrect
+                stair1.Decide(false, data.rt)
+            }
+            data.Load = CurrentLoad
+            data.TrialType = 'Probe'
+        // var ResponseIndex = ResponseMapping.indexOf(data.response)
 
-        if ( KeyboardMappings[ResponseIndex] == correct) 
-          {
-            data.correct = 1,
-            console.log(data)
-            stair1.Decide(true, data.rt)
-            FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_correct
-            // LabelNames.Correct
-          }
-        else {
-          data.correct = 0
-          stair1.Decide(false, data.rt)
-          FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_incorrect
-        //   LabelNames.Incorrect
-        }
-        /* If the ESCAPE key is pressed the current timeline is ended and the thank you screen is shown */
-        if (data.response == 27) {jsPsych.end();}
+        // if ( KeyboardMappings[ResponseIndex] == correct) 
+        //   {
+        //     data.correct = 1,
+        //     console.log(data)
+        //     stair1.Decide(true, data.rt)
+        //     FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_correct
+        //     // LabelNames.Correct
+        //   }
+        // else {
+        //   data.correct = 0
+        //   stair1.Decide(false, data.rt)
+        //   FeedbackText = jatos.studySessionData.translations.verbal_dms_feedback_incorrect
+        // //   LabelNames.Incorrect
+        // }
+        // /* If the ESCAPE key is pressed the current timeline is ended and the thank you screen is shown */
+        // if (data.response == 27) {jsPsych.end();}
 
       }
     }
@@ -194,7 +236,6 @@ jatos.onLoad(function() {
   var Fix = {
       type: jsPsychHtmlButtonResponse,
       stimulus: function(data) {
-        console.log(FeedbackFlag)
         if ( FeedbackFlag )
         {return '<p style="font-size:'+VERBAL_DMS_PARAMS.DMSFontSize+'px; color:'+VERBAL_DMS_PARAMS.ProbeColor+'">'+FeedbackText+'</p>'}
         else 
@@ -278,7 +319,7 @@ var thank_you = {
     var Instructions02 = {
         type: jsPsychHtmlButtonResponse,
         stimulus: function() { 
-            var Str = jatos.studySessionData.translations.VERBAL_dms_instructions02 
+            var Str = jatos.studySessionData.translations.verbal_dms_instructions02 
             return Str
         },
         post_trial_gap: 0,
@@ -305,17 +346,17 @@ var thank_you = {
         jatos.submitResultData(Results)
     },
     }    
-    // timeline.push(WelcomeWritten)
-    // timeline.push(Instructions01a)
-    // timeline.push(Instructions01b)
-    // timeline.push(Instructions01c)
-    // timeline.push(Instructions02)
+    timeline.push(WelcomeWritten)
+    timeline.push(Instructions01a)
+    timeline.push(Instructions01b)
+    timeline.push(Instructions01c)
+    timeline.push(Instructions02)
      timeline.push(setupPractice)
      timeline.push(loop_node)
-    // timeline.push(Instructions03)
-    // timeline.push(setupTest)
-    // timeline.push(loop_node)
-    // timeline.push(SendData)
-    // timeline.push(thank_you)
+    timeline.push(Instructions03)
+    timeline.push(setupTest)
+    timeline.push(loop_node)
+    timeline.push(SendData)
+    timeline.push(thank_you)
     jsPsych.run(timeline);
 })
