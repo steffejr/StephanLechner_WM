@@ -104,13 +104,14 @@ var jsPsychHtmlButtonResponseTouchscreen = (function (jspsych) {
           }
 
           var html = '';
-          html += '<table style="height:75vh">'
+          html += '<div class="vdmsTableDiv">'
+          html += '<table style="height:75vh" class="vdmstable">'
           html += '<tr>'
-          html += '<td>'
+          html += '<td class="vdmscell">'
           html += trial.stimulus
           html += '</tr>'
           html += '<tr style="height:25%; text-align:center">'
-          html += '<td>'
+          html += '<td class="vdmscell">'
           html += '<div id="jspsych-html-button-response-btngroup">';
                   for (var i = 0; i < trial.choices.length; i++) {
                       var str = buttons[i].replace(/%choice%/g, trial.choices[i]);
@@ -130,6 +131,7 @@ var jsPsychHtmlButtonResponseTouchscreen = (function (jspsych) {
 
           html += '</tr>'
           html += '</table>'
+          html += '</div>'
 
          
           display_element.innerHTML = html;

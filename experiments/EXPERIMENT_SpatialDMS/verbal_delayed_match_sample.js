@@ -122,7 +122,7 @@ jatos.onLoad(function() {
         },
     }
 
-       var Retention = {
+    var Retention = {
       // Each trial also has its own specific cue which occurs BEFORE the stimulus presentation
       // The cue itself is actually made in the setup file and not here. This could be changed if desired
       type: jsPsychHtmlButtonResponse,
@@ -351,8 +351,8 @@ var thank_you = {
     timeline.push(Instructions01b)
     timeline.push(Instructions01c)
     timeline.push(Instructions02)
-     timeline.push(setupPractice)
-     timeline.push(loop_node)
+    timeline.push(setupPractice)
+    timeline.push(loop_node)
     timeline.push(Instructions03)
     timeline.push(setupTest)
     timeline.push(loop_node)
